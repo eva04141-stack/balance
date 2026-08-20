@@ -1485,7 +1485,7 @@
 
 
   <script>
-    const GOOGLE_APPS_SCRIPT_URL = '';
+    const GOOGLE_APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbz2SBLowq1Sl3DZcZ821Bzg_A0Ch-yPhZHO0E-AeUv_EZnZ2ZG4rrIW9STXyD4QwrUv/exec';
 
     const CARDS_DATABASE = [
       { id: 1, quote: "你一定會迷惘，也會害怕，但那不代表你不夠好。" },
@@ -1841,7 +1841,17 @@
       const service = document.getElementById('consult-service').value;
       const note = document.getElementById('consult-note').value;
 
-      const payload = { name, contact, service, note };
+      // 傳送包含多重同義欄位名稱，確保 GAS 欄位名稱無論寫 contact/email/note/message 都能順利接收
+      const payload = { 
+        name: name,
+        contact: contact,
+        email: contact,
+        lineId: contact,
+        service: service,
+        note: note,
+        message: note,
+        content: note
+      };
 
       if (window.saveConsultationToFirebase) {
         window.saveConsultationToFirebase(payload);
@@ -1872,6 +1882,7 @@
         showToast('✨ 已收到您的預約，我們會盡快與您聯繫！');
         e.target.reset();
       }
+      
     }
 
     function openSavedQuotesModal() {
