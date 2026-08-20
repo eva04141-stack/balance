@@ -378,7 +378,7 @@
           </div>
 
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div onclick="navTo('service-jewelry')" class="group cursor-pointer bg-white rounded-3xl p-8 border border-morandi-accentSoft shadow-soft hover:shadow-card hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
+            <div id="pathway-jewelry" onclick="navTo('service-jewelry', null, 'pathway-jewelry')" class="group cursor-pointer bg-white rounded-3xl p-8 border border-morandi-accentSoft shadow-soft hover:shadow-card hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
               <div>
                 <div class="w-12 h-12 rounded-2xl bg-morandi-accentSoft/50 text-morandi-primary flex items-center justify-center text-xl mb-6 group-hover:bg-morandi-primary group-hover:text-white transition-colors shadow-xs">
                   <i class="fa-solid fa-gem"></i>
@@ -395,7 +395,7 @@
               </div>
             </div>
 
-            <div onclick="navTo('service-career')" class="group cursor-pointer bg-white rounded-3xl p-8 border border-morandi-accentSoft shadow-soft hover:shadow-card hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
+            <div id="pathway-career" onclick="navTo('service-career', null, 'pathway-career')" class="group cursor-pointer bg-white rounded-3xl p-8 border border-morandi-accentSoft shadow-soft hover:shadow-card hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
               <div>
                 <div class="w-12 h-12 rounded-2xl bg-morandi-accentSoft/50 text-morandi-primary flex items-center justify-center text-xl mb-6 group-hover:bg-morandi-primary group-hover:text-white transition-colors shadow-xs">
                   <i class="fa-regular fa-comments"></i>
@@ -412,7 +412,7 @@
               </div>
             </div>
 
-            <div onclick="navTo('service-crystaltree')" class="group cursor-pointer bg-white rounded-3xl p-8 border border-morandi-accentSoft shadow-soft hover:shadow-card hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
+            <div id="pathway-crystaltree" onclick="navTo('service-crystaltree', null, 'pathway-crystaltree')" class="group cursor-pointer bg-white rounded-3xl p-8 border border-morandi-accentSoft shadow-soft hover:shadow-card hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
               <div>
                 <div class="w-12 h-12 rounded-2xl bg-morandi-accentSoft/50 text-morandi-primary flex items-center justify-center text-xl mb-6 group-hover:bg-morandi-primary group-hover:text-white transition-colors shadow-xs">
                   <i class="fa-solid fa-spa"></i>
@@ -429,7 +429,7 @@
               </div>
             </div>
 
-            <div onclick="navTo('service-humandesign')" class="group cursor-pointer bg-white rounded-3xl p-8 border border-morandi-accentSoft shadow-soft hover:shadow-card hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
+            <div id="pathway-humandesign" onclick="navTo('service-humandesign', null, 'pathway-humandesign')" class="group cursor-pointer bg-white rounded-3xl p-8 border border-morandi-accentSoft shadow-soft hover:shadow-card hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
               <div>
                 <div class="w-12 h-12 rounded-2xl bg-morandi-accentSoft/50 text-morandi-primary flex items-center justify-center text-xl mb-6 group-hover:bg-morandi-primary group-hover:text-white transition-colors shadow-xs">
                   <i class="fa-solid fa-compass-drafting"></i>
@@ -446,7 +446,7 @@
               </div>
             </div>
 
-            <div onclick="navTo('service-lifecoach')" class="group cursor-pointer bg-white rounded-3xl p-8 border border-morandi-accentSoft shadow-soft hover:shadow-card hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between md:col-span-2 lg:col-span-2">
+            <div id="pathway-lifecoach" onclick="navTo('service-lifecoach', null, 'pathway-lifecoach')" class="group cursor-pointer bg-white rounded-3xl p-8 border border-morandi-accentSoft shadow-soft hover:shadow-card hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between md:col-span-2 lg:col-span-2">
               <div>
                 <div class="w-12 h-12 rounded-2xl bg-morandi-accentSoft/50 text-morandi-primary flex items-center justify-center text-xl mb-6 group-hover:bg-morandi-primary group-hover:text-white transition-colors shadow-xs">
                   <i class="fa-solid fa-flask"></i>
@@ -535,7 +535,7 @@
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             
             <!-- Activity 1: 輕珠寶設計創業課 -->
-            <div class="bg-white rounded-3xl overflow-hidden border border-morandi-accentSoft shadow-soft hover:shadow-card transition-all duration-300 group flex flex-col">
+            <div id="recent-jewelry" class="bg-white rounded-3xl overflow-hidden border border-morandi-accentSoft shadow-soft hover:shadow-card transition-all duration-300 group flex flex-col">
               <div class="h-48 relative overflow-hidden bg-morandi-accentSoft/30">
                 <img 
                   src="Gemini_Generated_Image_s2bxnks2bxnks2bx.jpg" 
@@ -559,7 +559,7 @@
                     把一顆水晶、一條線、一雙手，變成一件真正屬於自己的作品與創業能力。
                   </p>
                 </div>
-                <a href="#service-jewelry" onclick="navTo('service-jewelry')" class="text-xs text-morandi-accent font-medium hover:underline flex items-center gap-1 pt-3 border-t border-morandi-accentSoft/50 mt-auto">
+                <a href="#service-jewelry" onclick="navTo('service-jewelry', null, 'recent-jewelry')" class="text-xs text-morandi-accent font-medium hover:underline flex items-center gap-1 pt-3 border-t border-morandi-accentSoft/50 mt-auto">
                   <span>【了解課程】</span>
                   <i class="fa-solid fa-angle-right text-[10px]"></i>
                 </a>
@@ -567,7 +567,7 @@
             </div>
 
             <!-- Activity 2: 自我探索 -->
-            <div class="bg-white rounded-3xl overflow-hidden border border-morandi-accentSoft shadow-soft hover:shadow-card transition-all duration-300 group flex flex-col">
+            <div id="recent-humandesign" class="bg-white rounded-3xl overflow-hidden border border-morandi-accentSoft shadow-soft hover:shadow-card transition-all duration-300 group flex flex-col">
               <div class="h-48 relative overflow-hidden bg-morandi-accentSoft/30">
                 <img 
                   src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80" 
@@ -591,7 +591,7 @@
                     當心裡有一件事情一直繞，換一個角度看看。讓卡片說故事，看見幽微心事。
                   </p>
                 </div>
-                <a href="#service-humandesign" onclick="navTo('service-humandesign')" class="text-xs text-morandi-accent font-medium hover:underline flex items-center gap-1 pt-3 border-t border-morandi-accentSoft/50 mt-auto">
+                <a href="#service-humandesign" onclick="navTo('service-humandesign', null, 'recent-humandesign')" class="text-xs text-morandi-accent font-medium hover:underline flex items-center gap-1 pt-3 border-t border-morandi-accentSoft/50 mt-auto">
                   <span>【了解服務】</span>
                   <i class="fa-solid fa-angle-right text-[10px]"></i>
                 </a>
@@ -599,7 +599,7 @@
             </div>
 
             <!-- Activity 3: 職涯探索與方向釐清 -->
-            <div class="bg-white rounded-3xl overflow-hidden border border-morandi-accentSoft shadow-soft hover:shadow-card transition-all duration-300 group flex flex-col">
+            <div id="recent-career" class="bg-white rounded-3xl overflow-hidden border border-morandi-accentSoft shadow-soft hover:shadow-card transition-all duration-300 group flex flex-col">
               <div class="h-48 relative overflow-hidden bg-morandi-accentSoft/30">
                 <img 
                   src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=800&q=80" 
@@ -623,7 +623,7 @@
                     不一定要找到夢想工作，先找到不想再過的生活。陪你把眼前事情看清楚。
                   </p>
                 </div>
-                <a href="#service-career" onclick="navTo('service-career')" class="text-xs text-morandi-accent font-medium hover:underline flex items-center gap-1 pt-3 border-t border-morandi-accentSoft/50 mt-auto">
+                <a href="#service-career" onclick="navTo('service-career', null, 'recent-career')" class="text-xs text-morandi-accent font-medium hover:underline flex items-center gap-1 pt-3 border-t border-morandi-accentSoft/50 mt-auto">
                   <span>【了解職涯諮詢】</span>
                   <i class="fa-solid fa-angle-right text-[10px]"></i>
                 </a>
@@ -631,7 +631,7 @@
             </div>
 
             <!-- Activity 4: 身心舒壓工作坊 -->
-            <div class="bg-white rounded-3xl overflow-hidden border border-morandi-accentSoft shadow-soft hover:shadow-card transition-all duration-300 group flex flex-col">
+            <div id="recent-crystaltree" class="bg-white rounded-3xl overflow-hidden border border-morandi-accentSoft shadow-soft hover:shadow-card transition-all duration-300 group flex flex-col">
               <div class="h-48 relative overflow-hidden bg-morandi-accentSoft/30">
                 <img 
                   src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?auto=format&fit=crop&w=800&q=80" 
@@ -655,7 +655,7 @@
                     讓身體先說話，讓腦袋休息一下。透過花陣曼陀羅創作與頌缽，換一個角度放鬆。
                   </p>
                 </div>
-                <a href="#service-crystaltree" onclick="navTo('service-crystaltree')" class="text-xs text-morandi-accent font-medium hover:underline flex items-center gap-1 pt-3 border-t border-morandi-accentSoft/50 mt-auto">
+                <a href="#service-crystaltree" onclick="navTo('service-crystaltree', null, 'recent-crystaltree')" class="text-xs text-morandi-accent font-medium hover:underline flex items-center gap-1 pt-3 border-t border-morandi-accentSoft/50 mt-auto">
                   <span>【看看近期活動】</span>
                   <i class="fa-solid fa-angle-right text-[10px]"></i>
                 </a>
@@ -705,25 +705,7 @@
               </h4>
               <p class="text-xs sm:text-sm text-morandi-dark/80 font-light leading-relaxed">
                 那就先承認不知道。把「我想要的」、「我做得到的」、以及「我還不知道的」分開。未知，不需要現在就被解決。
-              </p>
-            </div>
-
-            <div class="bg-white/90 backdrop-blur-sm rounded-3xl p-6 sm:p-8 border border-morandi-accentSoft shadow-soft hover:shadow-card transition-shadow">
-              <h4 class="font-serif-custom text-base font-semibold text-morandi-dark mb-2 text-morandi-sage">
-                「我已經很累了。」
-              </h4>
-              <p class="text-xs sm:text-sm text-morandi-dark/80 font-light leading-relaxed">
-                總是在服務別人的你，也該好好服務自己一天了。
-              </p>
-            </div>
-
-          </div>
-
-        </div>
-      </section>
-
-      <!-- FINAL WARM CTA SECTION -->
-      <section class="py-20 md:py-28 bg-[#EDE5DC] border-t border-morandi-accentSoft">
+      <section id="final-cta-section" class="py-20 md:py-28 bg-[#EDE5DC] border-t border-morandi-accentSoft">
         <div class="max-w-3xl mx-auto px-6 text-center space-y-6">
           <span class="text-xs text-morandi-accent tracking-widest uppercase font-semibold block">NEXT STEP</span>
           
@@ -740,6 +722,25 @@
             <button onclick="openConsultModal()" class="px-8 py-3.5 rounded-full bg-morandi-primary hover:bg-morandi-dark text-white text-xs tracking-widest font-medium shadow-soft hover:shadow-card active:scale-95 transition-all">
               預約聊聊諮詢
             </button>
+            <button onclick="navTo('service-jewelry', null, 'final-cta-section')" class="px-8 py-3.5 rounded-full bg-white hover:bg-morandi-bg text-morandi-dark border border-morandi-accentSoft text-xs tracking-widest font-medium active:scale-95 transition-all shadow-xs">
+              看看近期課程
+            </button>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- ========================================================= -->
+    <!-- VIEW 2: SERVICE DETAIL - CAREER COACHING (#service-career) -->
+    <!-- ========================================================= -->
+    <div id="view-service-career" class="spa-view hidden">
+      <div class="max-w-4xl mx-auto px-4 py-12 md:py-20">
+        
+        <!-- Back Navigation -->
+        <button onclick="goBackToOrigin()" class="inline-flex items-center text-xs text-morandi-muted hover:text-morandi-dark mb-8 tracking-wider active:scale-95 transition-all">
+          <i class="fa-solid fa-arrow-left mr-2"></i> 返回
+        </button>
             <button onclick="navTo('service-jewelry')" class="px-8 py-3.5 rounded-full bg-white hover:bg-morandi-bg text-morandi-dark border border-morandi-accentSoft text-xs tracking-widest font-medium active:scale-95 transition-all shadow-xs">
               看看近期課程
             </button>
@@ -858,8 +859,8 @@
       <div class="max-w-5xl mx-auto px-4 py-12 md:py-20">
         
         <!-- Back Navigation -->
-        <button onclick="navTo('home')" class="inline-flex items-center text-xs text-morandi-muted hover:text-morandi-dark mb-8 tracking-wider active:scale-95 transition-all">
-          <i class="fa-solid fa-arrow-left mr-2"></i> 返回十字路口首頁
+        <button onclick="goBackToOrigin()" class="inline-flex items-center text-xs text-morandi-muted hover:text-morandi-dark mb-8 tracking-wider active:scale-95 transition-all">
+          <i class="fa-solid fa-arrow-left mr-2"></i> 返回
         </button>
 
         <!-- MAIN KEY VISUAL BANNER -->
@@ -1023,8 +1024,8 @@
     <div id="view-service-humandesign" class="spa-view hidden">
       <div class="max-w-4xl mx-auto px-4 py-12 md:py-20">
         
-        <button onclick="navTo('home')" class="inline-flex items-center text-xs text-morandi-muted hover:text-morandi-dark mb-8 tracking-wider active:scale-95 transition-all">
-          <i class="fa-solid fa-arrow-left mr-2"></i> 返回十字路口首頁
+        <button onclick="goBackToOrigin()" class="inline-flex items-center text-xs text-morandi-muted hover:text-morandi-dark mb-8 tracking-wider active:scale-95 transition-all">
+          <i class="fa-solid fa-arrow-left mr-2"></i> 返回
         </button>
 
         <div class="w-full bg-gradient-to-br from-[#182232] via-[#1C2A3E] to-[#0F1722] text-white rounded-3xl p-8 md:p-12 mb-10 relative overflow-hidden shadow-card border border-morandi-nightGold/40 flex flex-col justify-between min-h-[340px]">
@@ -1115,8 +1116,8 @@
     <div id="view-service-crystaltree" class="spa-view hidden">
       <div class="max-w-4xl mx-auto px-4 py-12 md:py-20">
         
-        <button onclick="navTo('home')" class="inline-flex items-center text-xs text-morandi-muted hover:text-morandi-dark mb-8 tracking-wider active:scale-95 transition-all">
-          <i class="fa-solid fa-arrow-left mr-2"></i> 返回十字路口首頁
+        <button onclick="goBackToOrigin()" class="inline-flex items-center text-xs text-morandi-muted hover:text-morandi-dark mb-8 tracking-wider active:scale-95 transition-all">
+          <i class="fa-solid fa-arrow-left mr-2"></i> 返回
         </button>
 
         <div class="w-full bg-gradient-to-br from-[#EAEFE6] via-[#DCE4D6] to-[#C9D4C2] rounded-3xl p-8 md:p-12 mb-10 relative overflow-hidden shadow-card border border-morandi-sage/40 flex flex-col justify-between min-h-[320px]">
@@ -1195,8 +1196,8 @@
     <div id="view-service-lifecoach" class="spa-view hidden">
       <div class="max-w-4xl mx-auto px-4 py-12 md:py-20">
         
-        <button onclick="navTo('home')" class="inline-flex items-center text-xs text-morandi-muted hover:text-morandi-dark mb-8 tracking-wider active:scale-95 transition-all">
-          <i class="fa-solid fa-arrow-left mr-2"></i> 返回十字路口首頁
+        <button onclick="goBackToOrigin()" class="inline-flex items-center text-xs text-morandi-muted hover:text-morandi-dark mb-8 tracking-wider active:scale-95 transition-all">
+          <i class="fa-solid fa-arrow-left mr-2"></i> 返回
         </button>
 
         <div class="w-full bg-gradient-to-br from-[#F5ECE2] via-[#E8DBD0] to-[#DAC9BB] rounded-3xl p-8 md:p-12 mb-10 relative overflow-hidden shadow-card border border-morandi-accentSoft flex flex-col justify-between min-h-[320px]">
@@ -1260,8 +1261,8 @@
     <div id="view-service-wealth" class="spa-view hidden">
       <div class="max-w-4xl mx-auto px-4 py-12 md:py-20">
         
-        <button onclick="navTo('home')" class="inline-flex items-center text-xs text-morandi-muted hover:text-morandi-dark mb-8 tracking-wider active:scale-95 transition-all">
-          <i class="fa-solid fa-arrow-left mr-2"></i> 返回十字路口首頁
+        <button onclick="goBackToOrigin()" class="inline-flex items-center text-xs text-morandi-muted hover:text-morandi-dark mb-8 tracking-wider active:scale-95 transition-all">
+          <i class="fa-solid fa-arrow-left mr-2"></i> 返回上一頁點選位置
         </button>
 
         <div class="w-full bg-gradient-to-br from-[#FAF2E6] via-[#EEDEB8] to-[#DFC696] rounded-3xl p-8 md:p-12 mb-10 relative overflow-hidden shadow-card border-2 border-morandi-accent/50 flex flex-col justify-between min-h-[320px]">
@@ -1548,6 +1549,8 @@
 
     let currentDrawnCard = null;
     let userStreak = 1;
+    let lastHomeScrollPos = 0;
+    let lastOriginId = null;
 
     document.addEventListener('DOMContentLoaded', () => {
       document.getElementById('year-text').innerText = new Date().getFullYear();
@@ -1595,7 +1598,15 @@
       });
     }
 
-    function navTo(viewId, scrollTargetId = null) {
+    function navTo(viewId, scrollTargetId = null, originId = null) {
+      const currentView = document.querySelector('.spa-view:not(.hidden)');
+      if (currentView && currentView.id === 'view-home' && viewId !== 'home') {
+        lastHomeScrollPos = window.scrollY;
+        if (originId) {
+          lastOriginId = originId;
+        }
+      }
+
       document.querySelectorAll('.spa-view').forEach(view => {
         view.classList.add('hidden');
         view.classList.remove('block');
@@ -1605,15 +1616,49 @@
       if (targetView) {
         targetView.classList.remove('hidden');
         targetView.classList.add('block');
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+        if (viewId !== 'home') {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
       }
 
       if (scrollTargetId) {
         setTimeout(() => {
           const elem = document.getElementById(scrollTargetId);
-          if (elem) elem.scrollIntoView({ behavior: 'smooth' });
+          if (elem) {
+            const y = elem.getBoundingClientRect().top + window.pageYOffset - 90;
+            window.scrollTo({ top: y, behavior: 'smooth' });
+          }
         }, 150);
       }
+    }
+
+    function goBackToOrigin() {
+      document.querySelectorAll('.spa-view').forEach(view => {
+        view.classList.add('hidden');
+        view.classList.remove('block');
+      });
+
+      const homeView = document.getElementById('view-home');
+      if (homeView) {
+        homeView.classList.remove('hidden');
+        homeView.classList.add('block');
+      }
+
+      setTimeout(() => {
+        if (lastOriginId) {
+          const elem = document.getElementById(lastOriginId);
+          if (elem) {
+            const y = elem.getBoundingClientRect().top + window.pageYOffset - 100;
+            window.scrollTo({ top: Math.max(0, y), behavior: 'smooth' });
+            return;
+          }
+        }
+        if (lastHomeScrollPos > 0) {
+          window.scrollTo({ top: lastHomeScrollPos, behavior: 'smooth' });
+        } else {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+      }, 100);
     }
 
     function handleHashRouting() {
