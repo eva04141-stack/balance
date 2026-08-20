@@ -1,0 +1,1949 @@
+<!DOCTYPE html>
+<html lang="zh-TW" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>十字路口 | 陪你走過人生改變期 · 許願象工作室</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="給正在改變路上的你。十字路口提供每日心靈抽卡、職涯諮詢、OH Card × 個人星盤、輕珠寶設計創業課與身心鬆弛體驗。不急著給答案，陪你看清下一步。">
+  <meta name="keywords" content="十字路口, 許願象工作室, 職涯諮詢, OH Card, 星盤諮詢, 輕珠寶設計, 心靈抽卡, Eva Ma">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            morandi: {
+              bg: '#FBF9F6',
+              card: '#F4EFEA',
+              cardHover: '#ECE3D8',
+              primary: '#8C7A6B',
+              dark: '#3A322A',
+              muted: '#96887B',
+              accent: '#C5A059',
+              accentSoft: '#E8DFD1',
+              sage: '#8A9A86',
+              rose: '#C8A29A',
+              terracotta: '#B87B67',
+              night: '#161F2C',
+              nightGold: '#E5C07B'
+            }
+          },
+          fontFamily: {
+            serif: ['"Noto Serif TC"', '"Cormorant Garamond"', 'Georgia', 'serif'],
+            sans: ['"Noto Sans TC"', 'Inter', 'sans-serif']
+          },
+          boxShadow: {
+            'soft': '0 10px 30px -10px rgba(140, 122, 107, 0.1)',
+            'card': '0 20px 40px -15px rgba(58, 50, 42, 0.06), 0 0 1px rgba(0, 0, 0, 0.05)',
+            'glow': '0 0 25px rgba(197, 160, 89, 0.2)',
+            'gold': '0 10px 25px rgba(197, 160, 89, 0.25)'
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts Integration -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=LXGW+WenKai+TC:wght@300;400;700&family=Noto+Sans+TC:wght@300;400;500;600&family=Noto+Serif+TC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    body {
+      background-color: #FBF9F6;
+      color: #3A322A;
+      font-family: 'Noto Sans TC', sans-serif;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* 3-Tier Typography Classes */
+    .font-serif-custom {
+      font-family: 'LXGW WenKai TC', 'Noto Serif TC', 'Songti TC', 'MingLiU', serif;
+    }
+
+    .font-eng-serif {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+    }
+
+    /* 3D Card Container & Flipping */
+    .perspective-1000 {
+      perspective: 1000px;
+    }
+
+    .card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+      transform-style: preserve-3d;
+    }
+
+    .card-inner.is-flipped {
+      transform: rotateY(180deg);
+    }
+
+    .card-face {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 1.25rem;
+      -webkit-backface-visibility: hidden;
+    }
+
+    .card-front {
+      transform: rotateY(0deg);
+    }
+
+    .card-back {
+      transform: rotateY(180deg);
+    }
+
+    /* Slow Rotate Animation */
+    @keyframes rotateSlow {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    .animate-spin-slow {
+      animation: rotateSlow 25s linear infinite;
+    }
+
+    /* Fade-in for view switching */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .animate-fade-in {
+      animation: fadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 5px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #FBF9F6;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #D8CEC4;
+      border-radius: 3px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #8C7A6B;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between selection:bg-morandi-accentSoft selection:text-morandi-dark">
+
+  <!-- HEADER -->
+  <header id="main-header" class="sticky top-0 z-50 bg-morandi-bg/95 backdrop-blur-md border-b border-morandi-accentSoft/60 transition-all duration-300">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <a href="#home" onclick="navTo('home')" class="flex items-center gap-3.5 group focus:outline-none">
+        <div class="w-10 h-10 rounded-full border border-morandi-accent/40 flex items-center justify-center bg-white/80 group-hover:border-morandi-accent group-hover:shadow-glow transition-all duration-300">
+          <i class="fa-solid fa-compass text-morandi-accent group-hover:rotate-45 transition-transform duration-500"></i>
+        </div>
+        <div>
+          <span class="block font-serif-custom text-xl tracking-widest text-morandi-dark font-medium">十字路口</span>
+          <span class="block text-[10px] tracking-[0.25em] text-morandi-muted uppercase font-eng-serif font-medium">Wishing Elephant Studio</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="hidden md:flex items-center space-x-8 text-xs tracking-[0.18em] font-medium text-morandi-dark/90">
+        <a href="#home" onclick="navTo('home')" class="nav-link hover:text-morandi-accent transition-colors">今日抽卡</a>
+        <div class="relative group">
+          <button class="flex items-center gap-1.5 hover:text-morandi-accent transition-colors py-2 focus:outline-none">
+            體驗陪伴 <i class="fa-solid fa-angle-down text-[10px] opacity-60 group-hover:rotate-180 transition-transform duration-300"></i>
+          </button>
+          <!-- Dropdown -->
+          <div class="absolute top-full left-0 w-60 py-3 bg-white rounded-2xl shadow-card border border-morandi-accentSoft opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-1 group-hover:translate-y-0 z-50">
+            <a href="#service-jewelry" onclick="navTo('service-jewelry')" class="block px-4 py-2.5 hover:bg-morandi-bg text-xs active:bg-morandi-accentSoft transition-colors">✨ 做點什麼｜輕珠寶設計課</a>
+            <a href="#service-career" onclick="navTo('service-career')" class="block px-4 py-2.5 hover:bg-morandi-bg text-xs active:bg-morandi-accentSoft transition-colors">💬 說說看｜職涯諮詢</a>
+            <a href="#service-crystaltree" onclick="navTo('service-crystaltree')" class="block px-4 py-2.5 hover:bg-morandi-bg text-xs active:bg-morandi-accentSoft transition-colors">🌿 讓身體鬆下來｜頌缽呼吸</a>
+            <a href="#service-humandesign" onclick="navTo('service-humandesign')" class="block px-4 py-2.5 hover:bg-morandi-bg text-xs active:bg-morandi-accentSoft transition-colors">🧭 探索自我｜OH Card</a>
+            <a href="#service-lifecoach" onclick="navTo('service-lifecoach')" class="block px-4 py-2.5 hover:bg-morandi-bg text-xs active:bg-morandi-accentSoft transition-colors">💡 新生活實驗室｜生活嘗試</a>
+            <a href="#service-wealth" onclick="navTo('service-wealth')" class="block px-4 py-2.5 hover:bg-morandi-bg text-xs active:bg-morandi-accentSoft transition-colors">🪙 財神卡｜翻轉金錢觀點</a>
+          </div>
+        </div>
+        <a href="#creator-story" onclick="navTo('home', 'creator-story')" class="nav-link hover:text-morandi-accent transition-colors">創作者告白</a>
+        <a href="#recent-activities" onclick="navTo('home', 'recent-activities')" class="nav-link hover:text-morandi-accent transition-colors">看看我們在做什麼</a>
+        <a href="#consultation-modal" onclick="openConsultModal()" class="px-5 py-2 rounded-full border border-morandi-accent/50 text-morandi-dark hover:bg-morandi-accent hover:text-white transition-all duration-300 shadow-sm text-xs tracking-widest active:scale-95">
+          預約聊聊
+        </a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <div id="streak-badge" class="hidden sm:flex items-center gap-2 px-3.5 py-1.5 bg-morandi-card border border-morandi-accentSoft rounded-full text-xs text-morandi-dark font-medium transition-all" title="你關注自己的天數">
+          <i class="fa-solid fa-leaf text-morandi-sage text-xs"></i>
+          <span class="tracking-wider">相遇的第 <strong id="streak-count" class="text-morandi-accent font-semibold">1</strong> 天</span>
+        </div>
+        
+        <button onclick="openSavedQuotesModal()" class="p-2.5 rounded-full hover:bg-morandi-card text-morandi-dark active:scale-95 transition-all relative focus:outline-none" title="查看收藏的卡牌">
+          <i class="fa-regular fa-bookmark text-base"></i>
+          <span id="saved-count-badge" class="absolute -top-1 -right-1 w-4 h-4 bg-morandi-accent text-white text-[9px] rounded-full flex items-center justify-center hidden shadow-sm">0</span>
+        </button>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button onclick="toggleMobileMenu()" class="md:hidden p-2 text-morandi-dark hover:text-morandi-accent focus:outline-none active:scale-95 transition-transform">
+          <i id="mobile-menu-icon" class="fa-solid fa-bars text-lg"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobile-menu" class="hidden md:hidden border-b border-morandi-accentSoft bg-morandi-bg/98 px-6 py-5 space-y-3 transition-all duration-300 shadow-lg">
+      <a href="#home" onclick="navTo('home'); toggleMobileMenu()" class="block text-xs tracking-widest py-2 text-morandi-dark border-b border-morandi-accentSoft/40">今日抽卡</a>
+      <div class="py-1 text-[11px] text-morandi-muted font-semibold tracking-widest uppercase mt-2 font-eng-serif">FIVE PATHWAYS</div>
+      <a href="#service-career" onclick="navTo('service-career'); toggleMobileMenu()" class="block text-xs py-2 pl-3 text-morandi-dark/90 hover:text-morandi-accent">💬 說說看｜職涯諮詢</a>
+      <a href="#service-jewelry" onclick="navTo('service-jewelry'); toggleMobileMenu()" class="block text-xs py-2 pl-3 text-morandi-dark/90 hover:text-morandi-accent">✨ 做點什麼｜輕珠寶設計課</a>
+      <a href="#service-humandesign" onclick="navTo('service-humandesign'); toggleMobileMenu()" class="block text-xs py-2 pl-3 text-morandi-dark/90 hover:text-morandi-accent">🧭 探索自我｜OH Card</a>
+      <a href="#service-crystaltree" onclick="navTo('service-crystaltree'); toggleMobileMenu()" class="block text-xs py-2 pl-3 text-morandi-dark/90 hover:text-morandi-accent">🌿 讓身體鬆下來｜頌缽呼吸</a>
+      <a href="#service-lifecoach" onclick="navTo('service-lifecoach'); toggleMobileMenu()" class="block text-xs py-2 pl-3 text-morandi-dark/90 hover:text-morandi-accent">💡 新生活實驗室｜生活嘗試</a>
+      <a href="#service-wealth" onclick="navTo('service-wealth'); toggleMobileMenu()" class="block text-xs py-2 pl-3 text-morandi-dark/90 hover:text-morandi-accent">🪙 財神卡｜金錢觀點</a>
+      <a href="#creator-story" onclick="navTo('home', 'creator-story'); toggleMobileMenu()" class="block text-xs tracking-widest py-2 text-morandi-dark border-t border-morandi-accentSoft/40">創作者告白</a>
+      <a href="#recent-activities" onclick="navTo('home', 'recent-activities'); toggleMobileMenu()" class="block text-xs tracking-widest py-2 text-morandi-dark">看看我們在做什麼</a>
+      <button onclick="openConsultModal(); toggleMobileMenu()" class="w-full mt-3 py-3 rounded-full bg-morandi-primary text-white text-xs font-medium tracking-widest shadow-sm active:scale-98 transition-all">
+        預約聊聊
+      </button>
+    </div>
+  </header>
+
+  <main class="flex-grow">
+
+    <!-- ========================================== -->
+    <!-- VIEW 1: HOME PAGE / DRAW CARD HALL (#home) -->
+    <!-- ========================================== -->
+    <div id="view-home" class="spa-view block">
+      
+      <!-- HERO & DAILY DRAW SECTION -->
+      <section class="relative py-14 md:py-24 overflow-hidden bg-gradient-to-b from-morandi-bg via-[#F7F2EB] to-morandi-bg">
+        <div class="absolute top-1/3 left-1/2 -translate-x-1/2 w-[550px] h-[550px] bg-morandi-accentSoft/30 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-4xl mx-auto px-4 text-center relative z-10">
+          
+          <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/80 border border-morandi-accentSoft text-[11px] text-morandi-primary tracking-widest uppercase mb-6 shadow-sm">
+            <span class="w-1.5 h-1.5 rounded-full bg-morandi-accent"></span>
+            給正在改變路上的你
+          </div>
+
+          <h1 class="text-3xl sm:text-4xl md:text-5xl font-serif-custom font-normal text-[#2E261F] tracking-[0.08em] leading-relaxed mb-5 drop-shadow-xs">
+            今天，想抽一張卡嗎？
+          </h1>
+
+          <p class="text-xs sm:text-sm text-[#736558] tracking-[0.12em] max-w-md mx-auto mb-12 font-light leading-loose">
+            不占卜，也沒有標準答案。<br class="hidden sm:block">只是看看今天的你，剛好需要聽見什麼。
+          </p>
+
+          <!-- 3D CARD DRAW AREA -->
+          <div class="max-w-sm mx-auto my-6 px-4">
+            
+            <div id="card-stage" class="perspective-1000 w-64 h-96 mx-auto cursor-pointer group" onclick="handleCardClick()">
+              <div id="card-element" class="card-inner shadow-card group-hover:shadow-glow rounded-2xl transition-all duration-500">
+                
+                <!-- CARD FRONT (Unflipped / Deck Cover) -->
+                <div class="card-face card-front bg-gradient-to-br from-[#FAF5EE] via-[#EAE0D3] to-[#DBCDC0] p-6 border border-morandi-accent/40 flex flex-col justify-between items-center text-center overflow-hidden">
+                  
+                  <div class="absolute inset-2.5 border border-morandi-accent/25 rounded-xl pointer-events-none"></div>
+                  
+                  <div class="pt-4 opacity-75">
+                    <span class="text-[10px] tracking-[0.25em] text-morandi-dark uppercase font-eng-serif block font-medium">CROSSROADS CARD</span>
+                  </div>
+
+                  <!-- Center Emblem -->
+                  <div class="my-auto py-6 flex flex-col items-center">
+                    <div class="w-16 h-16 rounded-full border border-morandi-accent/40 flex items-center justify-center bg-white/50 mb-4 shadow-sm group-hover:scale-105 transition-transform duration-500">
+                      <i class="fa-regular fa-sun text-xl text-morandi-accent animate-spin-slow"></i>
+                    </div>
+                    <span class="font-serif-custom text-morandi-dark text-base tracking-widest font-medium">今日支持小語</span>
+                    <span class="text-[11px] text-morandi-muted tracking-widest mt-1.5 font-light">點擊翻開微光</span>
+                  </div>
+
+                  <div class="pb-2 text-[10px] text-morandi-muted tracking-[0.25em] font-eng-serif uppercase font-medium">
+                    WISHING ELEPHANT
+                  </div>
+                </div>
+
+                <!-- CARD BACK (Flipped Result) -->
+                <div class="card-face card-back bg-white p-7 border border-morandi-accent/40 flex flex-col justify-between text-center overflow-hidden shadow-card">
+                  <div class="absolute inset-2.5 border border-morandi-accent/20 rounded-xl pointer-events-none"></div>
+                  
+                  <div class="flex justify-between items-center border-b border-morandi-accentSoft/60 pb-3">
+                    <span id="card-id-text" class="text-[10px] font-mono tracking-widest text-morandi-accent">#CARD-00</span>
+                    <span class="text-[10px] tracking-widest text-morandi-muted font-serif-custom">十字路口</span>
+                  </div>
+
+                  <div class="my-auto py-4 px-1 flex flex-col justify-center items-center">
+                    <i class="fa-solid fa-quote-left text-morandi-accentSoft text-xl mb-3 opacity-80"></i>
+                    <p id="card-quote-text" class="font-serif-custom text-morandi-dark text-base sm:text-lg leading-loose font-normal px-2">
+                      「這句話正在等待被翻開...」
+                    </p>
+                  </div>
+
+                  <div class="pt-3 border-t border-morandi-accentSoft/60 text-[10px] text-morandi-muted tracking-widest">
+                    溫柔陪伴 · 許願象工作室
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- DRAW CONTROLS & ACTIONS -->
+            <div id="draw-actions" class="mt-10 flex flex-col items-center gap-3">
+              <button id="btn-draw" onclick="performCardDraw()" class="px-8 py-3.5 rounded-full bg-morandi-primary hover:bg-morandi-dark text-white font-medium text-xs tracking-[0.2em] shadow-soft hover:shadow-card active:scale-95 transition-all duration-300 flex items-center gap-2.5">
+                <span>抽一張今日祝福</span>
+                <i class="fa-solid fa-arrow-right text-[10px]"></i>
+              </button>
+
+              <div id="post-draw-buttons" class="hidden flex flex-wrap justify-center gap-3 animate-fade-in">
+                <button onclick="saveCurrentQuote()" class="px-5 py-2.5 rounded-full bg-morandi-card hover:bg-morandi-cardHover text-morandi-dark border border-morandi-accentSoft text-xs font-medium tracking-wider active:scale-95 transition-all flex items-center gap-2">
+                  <i class="fa-regular fa-bookmark text-xs"></i>
+                  <span>這句話，我想留著</span>
+                </button>
+                <button onclick="shareCurrentQuote()" class="px-5 py-2.5 rounded-full bg-white hover:bg-morandi-card text-morandi-dark border border-morandi-accentSoft text-xs font-medium tracking-wider active:scale-95 transition-all flex items-center gap-2 shadow-xs">
+                  <i class="fa-solid fa-arrow-up-from-bracket text-xs text-morandi-accent"></i>
+                  <span>分享給朋友</span>
+                </button>
+                <button onclick="redrawCard()" class="px-5 py-2.5 rounded-full bg-white hover:bg-morandi-bg text-morandi-muted border border-morandi-accentSoft text-xs tracking-wider active:scale-95 transition-all">
+                  再抽一張
+                </button>
+              </div>
+
+              <p id="drawn-today-notice" class="hidden text-xs text-morandi-muted tracking-wider mt-2 font-light">
+                ✨ 你今天已經抽過卡片囉！已為你保留今日的溫暖陪伴。
+              </p>
+            </div>
+
+          </div>
+
+          <!-- Gentle Narrative -->
+          <div class="mt-20 max-w-2xl mx-auto text-left bg-white/90 backdrop-blur-sm rounded-3xl p-8 sm:p-12 border border-morandi-accentSoft/80 shadow-soft">
+            <h3 class="font-serif-custom text-xl font-medium text-morandi-dark mb-5 text-center sm:text-left tracking-wide">
+              如果你最近也在經歷一些改變
+            </h3>
+            
+            <p class="text-xs sm:text-sm text-morandi-dark/80 leading-loose space-y-3 font-light">
+              有些人正在離開一段關係。有些人想換一份工作。有些人明明知道不能再這樣，卻還不知道下一步。<br>
+              有些人只是累了。想找個地方坐一下。
+            </p>
+
+            <div class="my-6 p-4 rounded-2xl bg-morandi-bg border-l-2 border-morandi-accent text-xs sm:text-sm font-serif-custom text-morandi-dark font-medium leading-relaxed">
+              「這裡不是教你變成更好的人」
+            </div>
+
+            <p class="text-xs sm:text-sm text-morandi-dark/80 leading-loose font-light">
+              我們不急著告訴你答案。有時候，你需要的是一場對話。有時候，是學一件新的事。有時候，是做出一件東西。有時候，只是需要有人陪你把腦袋裡那團線慢慢理一理。
+            </p>
+
+            <div class="mt-8 pt-6 border-t border-morandi-accentSoft/60 text-center sm:text-left">
+              <span class="text-[10px] tracking-[0.25em] text-morandi-accent uppercase font-eng-serif font-semibold block mb-1">SMALL STEPS</span>
+              <p class="font-serif-custom text-sm sm:text-base text-morandi-dark font-medium tracking-wide">
+                改變不一定從做出重大決定開始。「你可以從很多地方開始」
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- FIVE PATHWAYS SECTION -->
+      <section class="py-20 md:py-28 bg-morandi-bg">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          <div class="text-center max-w-2xl mx-auto mb-16">
+            <span class="text-[11px] text-morandi-accent tracking-[0.25em] font-eng-serif font-semibold uppercase block mb-2">FIVE PATHWAYS</span>
+            <h2 class="text-2xl md:text-3xl font-serif-custom font-medium text-morandi-dark tracking-wide">
+              選擇一種適合你現在狀態的開始
+            </h2>
+            <div class="w-10 h-0.5 bg-morandi-accent/60 mx-auto mt-4 rounded-full"></div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
+            <!-- Pathway 1 -->
+            <div id="pathway-jewelry" onclick="navTo('service-jewelry', 'pathway-jewelry')" class="group cursor-pointer bg-white rounded-3xl p-8 border border-morandi-accentSoft/80 shadow-soft hover:shadow-card hover:-translate-y-1 active:scale-98 transition-all duration-300 flex flex-col justify-between">
+              <div>
+                <div class="w-11 h-11 rounded-2xl bg-morandi-card text-morandi-primary flex items-center justify-center text-lg mb-6 group-hover:bg-morandi-primary group-hover:text-white transition-colors duration-300">
+                  <i class="fa-solid fa-gem"></i>
+                </div>
+                <span class="text-[10px] text-morandi-muted tracking-[0.2em] uppercase block mb-1 font-eng-serif font-medium">CREATION & CRAFT</span>
+                <h3 class="font-serif-custom text-lg font-medium text-morandi-dark mb-3">✨ 做點什麼｜輕珠寶設計課</h3>
+                <p class="text-xs text-morandi-dark/75 leading-relaxed font-light mb-6">
+                  有時候不是想不通，而是需要換一種方式認識自己。輕珠寶設計創業培訓、曼陀羅創作工作坊與自由書寫。
+                </p>
+              </div>
+              <div class="flex items-center text-xs font-medium text-morandi-accent group-hover:text-morandi-dark transition-colors">
+                <span>了解課程與創作</span>
+                <i class="fa-solid fa-arrow-right ml-2 text-[10px] group-hover:translate-x-1 transition-transform"></i>
+              </div>
+            </div>
+
+            <!-- Pathway 2 -->
+            <div id="pathway-career" onclick="navTo('service-career', 'pathway-career')" class="group cursor-pointer bg-white rounded-3xl p-8 border border-morandi-accentSoft/80 shadow-soft hover:shadow-card hover:-translate-y-1 active:scale-98 transition-all duration-300 flex flex-col justify-between">
+              <div>
+                <div class="w-11 h-11 rounded-2xl bg-morandi-card text-morandi-primary flex items-center justify-center text-lg mb-6 group-hover:bg-morandi-primary group-hover:text-white transition-colors duration-300">
+                  <i class="fa-regular fa-comments"></i>
+                </div>
+                <span class="text-[10px] text-morandi-muted tracking-[0.2em] uppercase block mb-1 font-eng-serif font-medium">CAREER & DIALOGUE</span>
+                <h3 class="font-serif-custom text-lg font-medium text-morandi-dark mb-3">💬 說說看｜職涯諮詢</h3>
+                <p class="text-xs text-morandi-dark/75 leading-relaxed font-light mb-6">
+                  不知道下一步怎麼走，可以先說說現在卡在哪裡。包含職涯探索、方向釐清、履歷健檢與求職策略對話。
+                </p>
+              </div>
+              <div class="flex items-center text-xs font-medium text-morandi-accent group-hover:text-morandi-dark transition-colors">
+                <span>了解對話服務</span>
+                <i class="fa-solid fa-arrow-right ml-2 text-[10px] group-hover:translate-x-1 transition-transform"></i>
+              </div>
+            </div>
+
+            <!-- Pathway 3 -->
+            <div id="pathway-crystaltree" onclick="navTo('service-crystaltree', 'pathway-crystaltree')" class="group cursor-pointer bg-white rounded-3xl p-8 border border-morandi-accentSoft/80 shadow-soft hover:shadow-card hover:-translate-y-1 active:scale-98 transition-all duration-300 flex flex-col justify-between">
+              <div>
+                <div class="w-11 h-11 rounded-2xl bg-morandi-card text-morandi-primary flex items-center justify-center text-lg mb-6 group-hover:bg-morandi-primary group-hover:text-white transition-colors duration-300">
+                  <i class="fa-solid fa-spa"></i>
+                </div>
+                <span class="text-[10px] text-morandi-muted tracking-[0.2em] uppercase block mb-1 font-eng-serif font-medium">RELAXATION & BODY</span>
+                <h3 class="font-serif-custom text-lg font-medium text-morandi-dark mb-3">🌿 讓身體鬆下來｜頌缽與靜心</h3>
+                <p class="text-xs text-morandi-dark/75 leading-relaxed font-light mb-6">
+                  讓身體先說話，讓腦袋休息一下。頌缽音療、呼吸調整課、瑜珈與水晶療癒空間。
+                </p>
+              </div>
+              <div class="flex items-center text-xs font-medium text-morandi-accent group-hover:text-morandi-dark transition-colors">
+                <span>了解身體舒壓</span>
+                <i class="fa-solid fa-arrow-right ml-2 text-[10px] group-hover:translate-x-1 transition-transform"></i>
+              </div>
+            </div>
+
+            <!-- Pathway 4 -->
+            <div id="pathway-humandesign" onclick="navTo('service-humandesign', 'pathway-humandesign')" class="group cursor-pointer bg-white rounded-3xl p-8 border border-morandi-accentSoft/80 shadow-soft hover:shadow-card hover:-translate-y-1 active:scale-98 transition-all duration-300 flex flex-col justify-between">
+              <div>
+                <div class="w-11 h-11 rounded-2xl bg-morandi-card text-morandi-primary flex items-center justify-center text-lg mb-6 group-hover:bg-morandi-primary group-hover:text-white transition-colors duration-300">
+                  <i class="fa-solid fa-compass-drafting"></i>
+                </div>
+                <span class="text-[10px] text-morandi-muted tracking-[0.2em] uppercase block mb-1 font-eng-serif font-medium">SELF DISCOVERY</span>
+                <h3 class="font-serif-custom text-lg font-medium text-morandi-dark mb-3">🧭 探索自我｜OH Card</h3>
+                <p class="text-xs text-morandi-dark/75 leading-relaxed font-light mb-6">
+                  讓卡片說故事。OH Card 像一張地形快照，幫助我們看見站在哪裡；星盤則提供理解自己的另一種維度。
+                </p>
+              </div>
+              <div class="flex items-center text-xs font-medium text-morandi-accent group-hover:text-morandi-dark transition-colors">
+                <span>了解牌卡與星盤</span>
+                <i class="fa-solid fa-arrow-right ml-2 text-[10px] group-hover:translate-x-1 transition-transform"></i>
+              </div>
+            </div>
+
+            <!-- Pathway 5 -->
+            <div id="pathway-lifecoach" onclick="navTo('service-lifecoach', 'pathway-lifecoach')" class="group cursor-pointer bg-white rounded-3xl p-8 border border-morandi-accentSoft/80 shadow-soft hover:shadow-card hover:-translate-y-1 active:scale-98 transition-all duration-300 flex flex-col justify-between md:col-span-2 lg:col-span-2">
+              <div>
+                <div class="w-11 h-11 rounded-2xl bg-morandi-card text-morandi-primary flex items-center justify-center text-lg mb-6 group-hover:bg-morandi-primary group-hover:text-white transition-colors duration-300">
+                  <i class="fa-solid fa-flask"></i>
+                </div>
+                <span class="text-[10px] text-morandi-muted tracking-[0.2em] uppercase block mb-1 font-eng-serif font-medium">LIFE EXPERIMENTS</span>
+                <h3 class="font-serif-custom text-lg font-medium text-morandi-dark mb-3">💡 想試試看新的可能｜新生活實驗室</h3>
+                <p class="text-xs text-morandi-dark/75 leading-relaxed font-light mb-6">
+                  讓我們陪你走一段，從選定一件小事開始，看看自己會走去哪裡。包含主題工作坊、生活實驗與財神卡問題對話。
+                </p>
+              </div>
+              <div class="flex items-center text-xs font-medium text-morandi-accent group-hover:text-morandi-dark transition-colors">
+                <span>探索生活實驗</span>
+                <i class="fa-solid fa-arrow-right ml-2 text-[10px] group-hover:translate-x-1 transition-transform"></i>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- CREATOR STORY SECTION -->
+      <section id="creator-story" class="py-20 md:py-28 bg-[#F4EFEA] border-y border-morandi-accentSoft/60">
+        <div class="max-w-4xl mx-auto px-6">
+          
+          <div class="text-center mb-12">
+            <span class="text-[11px] text-morandi-accent tracking-[0.25em] font-eng-serif font-semibold uppercase block mb-2">MY STORY</span>
+            <h2 class="text-2xl md:text-3xl font-serif-custom font-medium text-morandi-dark tracking-wide">
+              「我也曾經不知道怎麼辦」
+            </h2>
+            <div class="w-10 h-0.5 bg-morandi-accent/60 mx-auto mt-3 rounded-full"></div>
+          </div>
+
+          <div class="bg-white/95 backdrop-blur-sm rounded-3xl p-8 sm:p-14 shadow-card border border-morandi-accentSoft/60 max-w-3xl mx-auto space-y-6 text-morandi-dark/85 font-light leading-loose text-xs sm:text-sm">
+            
+            <p class="font-serif-custom text-sm sm:text-base text-morandi-dark font-medium leading-relaxed">
+              我曾經以為，人生到了某個階段，就應該知道自己要什麼。
+            </p>
+
+            <p>
+              後來才發現，不是每一段人生都有清楚的地圖。<br>
+              有時候離開一份工作，並不代表下一份工作已經準備好了。<br>
+              有時候知道一段關係不適合自己，也不代表告別就會很容易。<br>
+              有時候只是覺得：「我不能再這樣下去了。」但除此之外，什麼都不知道。
+            </p>
+
+            <blockquote class="my-8 py-4 px-6 border-l-2 border-morandi-accent bg-morandi-bg/80 italic font-serif-custom text-morandi-dark text-sm sm:text-base">
+              「走舊路，到不了新地方。」
+            </blockquote>
+
+            <p>
+              所以我開始想，也許我們真正需要的，不是一個告訴我們答案的人，而是一個可以一起想想看的人。
+            </p>
+
+            <p>
+              過去我在金融、科技與品牌領域積累了商業經驗，協助超過 100 份履歷與職涯諮詢；同時我也深愛 OH Card 牌卡對話、個人星盤與文字創作。這些工具不是神秘的解答，而是幫一個人重新看見自己、試一點新的可能的方法。
+            </p>
+
+            <div class="pt-8 mt-8 border-t border-morandi-accentSoft flex items-center justify-between">
+              <div>
+                <span class="font-serif-custom font-medium text-morandi-dark block text-sm sm:text-base">Eva</span>
+                <span class="text-[11px] text-morandi-muted font-light">文字牌卡創作者 IN 許願象工作室</span>
+              </div>
+              <div class="text-xs text-morandi-accent italic font-eng-serif tracking-widest font-medium">
+                Love & Beauty. Our Faith.
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- RECENT ACTIVITIES SECTION -->
+      <section id="recent-activities" class="py-20 md:py-28 bg-morandi-bg">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          <div class="text-center max-w-xl mx-auto mb-16">
+            <span class="text-[11px] text-morandi-accent tracking-[0.25em] font-eng-serif font-semibold uppercase block mb-2">WHAT'S HAPPENING</span>
+            <h2 class="text-2xl md:text-3xl font-serif-custom font-medium text-morandi-dark tracking-wide">
+              我們最近正在做的事
+            </h2>
+            <p class="text-xs text-morandi-muted mt-2 font-light tracking-wider">用創作與對話，讓軟性能力變得清晰可見</p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            
+            <!-- Activity 1 -->
+            <div id="act-jewelry" class="bg-white rounded-3xl overflow-hidden border border-morandi-accentSoft/80 shadow-soft hover:shadow-card transition-all duration-300 group">
+              <div class="h-48 relative overflow-hidden bg-morandi-accentSoft/30">
+                <img 
+                  src="Gemini_Generated_Image_s2bxnks2bxnks2bx.jpg" 
+                  alt="輕珠寶設計創業課" 
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  onerror="this.onerror=null; this.src='https://placehold.co/600x400/E8DFD1/8C7A6B?text=Jewelry+Design';"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/10"></div>
+                <span class="absolute top-3.5 right-3.5 px-3 py-1 bg-white/95 backdrop-blur-md rounded-full text-[10px] text-morandi-dark font-medium shadow-sm tracking-wider">
+                  實體課程
+                </span>
+                <div class="absolute bottom-3.5 left-3.5 text-white text-xs font-serif-custom tracking-widest opacity-95 flex items-center gap-1.5">
+                  <i class="fa-solid fa-gem text-morandi-accent text-[10px]"></i>
+                  <span>美感 × 創造 × 設計</span>
+                </div>
+              </div>
+              <div class="p-6 flex flex-col justify-between h-52">
+                <div>
+                  <h4 class="font-serif-custom font-medium text-morandi-dark text-base mb-2">輕珠寶設計創業課</h4>
+                  <p class="text-xs text-morandi-dark/75 font-light leading-relaxed">
+                    把一顆水晶、一條線、一雙手，變成一件真正屬於自己的作品與創業能力。
+                  </p>
+                </div>
+                <a href="#service-jewelry" onclick="navTo('service-jewelry', 'act-jewelry')" class="text-xs text-morandi-accent font-medium hover:underline flex items-center gap-1 pt-3 border-t border-morandi-accentSoft/50">
+                  <span>【了解課程】</span>
+                  <i class="fa-solid fa-angle-right text-[9px]"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Activity 2 -->
+            <div id="act-humandesign" class="bg-white rounded-3xl overflow-hidden border border-morandi-accentSoft/80 shadow-soft hover:shadow-card transition-all duration-300 group">
+              <div class="h-48 relative overflow-hidden bg-morandi-accentSoft/30">
+                <img 
+                  src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80" 
+                  alt="自我探索" 
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  onerror="this.onerror=null; this.src='https://placehold.co/600x400/1C2536/E5C07B?text=OH+Card+Astrology';"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-black/10"></div>
+                <span class="absolute top-3.5 right-3.5 px-3 py-1 bg-white/95 backdrop-blur-md rounded-full text-[10px] text-morandi-dark font-medium shadow-sm tracking-wider">
+                  一對一諮詢
+                </span>
+                <div class="absolute bottom-3.5 left-3.5 text-white text-xs font-serif-custom tracking-widest opacity-95 flex items-center gap-1.5">
+                  <i class="fa-regular fa-moon text-morandi-nightGold text-[10px]"></i>
+                  <span>讓卡片說故事</span>
+                </div>
+              </div>
+              <div class="p-6 flex flex-col justify-between h-52">
+                <div>
+                  <h4 class="font-serif-custom font-medium text-morandi-dark text-base mb-2">自我探索</h4>
+                  <p class="text-xs text-morandi-dark/75 font-light leading-relaxed">
+                    當心裡有一件事情一直繞，換一個角度看看。讓卡片說故事，看見幽微心事。
+                  </p>
+                </div>
+                <a href="#service-humandesign" onclick="navTo('service-humandesign', 'act-humandesign')" class="text-xs text-morandi-accent font-medium hover:underline flex items-center gap-1 pt-3 border-t border-morandi-accentSoft/50">
+                  <span>【了解服務】</span>
+                  <i class="fa-solid fa-angle-right text-[9px]"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Activity 3 -->
+            <div id="act-career" class="bg-white rounded-3xl overflow-hidden border border-morandi-accentSoft/80 shadow-soft hover:shadow-card transition-all duration-300 group">
+              <div class="h-48 relative overflow-hidden bg-morandi-accentSoft/30">
+                <img 
+                  src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=800&q=80" 
+                  alt="職涯探索與方向釐清" 
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  onerror="this.onerror=null; this.src='https://placehold.co/600x400/D8CEC4/4A4238?text=Career+Coaching';"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/10"></div>
+                <span class="absolute top-3.5 right-3.5 px-3 py-1 bg-white/95 backdrop-blur-md rounded-full text-[10px] text-morandi-dark font-medium shadow-sm tracking-wider">
+                  職涯諮詢
+                </span>
+                <div class="absolute bottom-3.5 left-3.5 text-white text-xs font-serif-custom tracking-widest opacity-95 flex items-center gap-1.5">
+                  <i class="fa-solid fa-compass text-morandi-accent text-[10px]"></i>
+                  <span>走舊路到不了新地方</span>
+                </div>
+              </div>
+              <div class="p-6 flex flex-col justify-between h-52">
+                <div>
+                  <h4 class="font-serif-custom font-medium text-morandi-dark text-base mb-2">職涯探索與方向釐清</h4>
+                  <p class="text-xs text-morandi-dark/75 font-light leading-relaxed">
+                    不一定要找到夢想工作，先找到不想再過的生活。陪你把眼前事情看清楚。
+                  </p>
+                </div>
+                <a href="#service-career" onclick="navTo('service-career', 'act-career')" class="text-xs text-morandi-accent font-medium hover:underline flex items-center gap-1 pt-3 border-t border-morandi-accentSoft/50">
+                  <span>【了解職涯諮詢】</span>
+                  <i class="fa-solid fa-angle-right text-[9px]"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Activity 4 -->
+            <div id="act-crystaltree" class="bg-white rounded-3xl overflow-hidden border border-morandi-accentSoft/80 shadow-soft hover:shadow-card transition-all duration-300 group">
+              <div class="h-48 relative overflow-hidden bg-morandi-accentSoft/30">
+                <img 
+                  src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?auto=format&fit=crop&w=800&q=80" 
+                  alt="身心舒壓工作坊" 
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  onerror="this.onerror=null; this.src='https://placehold.co/600x400/C9D4C2/4A5846?text=Mandala+Healing';"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/10"></div>
+                <span class="absolute top-3.5 right-3.5 px-3 py-1 bg-white/95 backdrop-blur-md rounded-full text-[10px] text-morandi-dark font-medium shadow-sm tracking-wider">
+                  主題工作坊
+                </span>
+                <div class="absolute bottom-3.5 left-3.5 text-white text-xs font-serif-custom tracking-widest opacity-95 flex items-center gap-1.5">
+                  <i class="fa-solid fa-spa text-morandi-sage text-[10px]"></i>
+                  <span>曼陀羅與頌缽療癒</span>
+                </div>
+              </div>
+              <div class="p-6 flex flex-col justify-between h-52">
+                <div>
+                  <h4 class="font-serif-custom font-medium text-morandi-dark text-base mb-2">身心舒壓工作坊</h4>
+                  <p class="text-xs text-morandi-dark/75 font-light leading-relaxed">
+                    讓身體先說話，讓腦袋休息一下。透過花陣曼陀羅創作與頌缽，換一個角度放鬆。
+                  </p>
+                </div>
+                <a href="#service-crystaltree" onclick="navTo('service-crystaltree', 'act-crystaltree')" class="text-xs text-morandi-accent font-medium hover:underline flex items-center gap-1 pt-3 border-t border-morandi-accentSoft/50">
+                  <span>【看看近期活動】</span>
+                  <i class="fa-solid fa-angle-right text-[9px]"></i>
+                </a>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- GENTLE VOICES SECTION -->
+      <section id="voices-section" class="py-20 md:py-28 bg-gradient-to-b from-morandi-bg via-[#F5EFEA] to-morandi-bg">
+        <div class="max-w-4xl mx-auto px-4">
+          
+          <div class="text-center mb-16">
+            <span class="text-[11px] text-morandi-accent tracking-[0.25em] font-eng-serif font-semibold uppercase block mb-2">GENTLE VOICES</span>
+            <h2 class="text-2xl md:text-3xl font-serif-custom font-medium text-morandi-dark tracking-wide">
+              陪你說話
+            </h2>
+            <p class="text-xs text-morandi-muted mt-2 font-light tracking-wider">在人生的十字路口，腦中的噪音喋喋不休，有時候需要有人把它說出來</p>
+          </div>
+
+          <div class="space-y-6">
+            
+            <div class="bg-white rounded-3xl p-6 sm:p-8 border border-morandi-accentSoft/80 shadow-soft">
+              <h4 class="font-serif-custom text-base font-medium text-morandi-dark mb-2.5 text-morandi-terracotta">
+                「我是不是能力不好？」
+              </h4>
+              <p class="text-xs sm:text-sm text-morandi-dark/80 font-light leading-relaxed">
+                你一定會迷惘，會害怕。但這一切，並不指向能力不好。
+              </p>
+            </div>
+
+            <div class="bg-white rounded-3xl p-6 sm:p-8 border border-morandi-accentSoft/80 shadow-soft">
+              <h4 class="font-serif-custom text-base font-medium text-morandi-dark mb-2.5 text-morandi-primary">
+                「我到底要不要改變？」
+              </h4>
+              <p class="text-xs sm:text-sm text-morandi-dark/80 font-light leading-relaxed">
+                急著往前，有時候反而會讓我們一直否定現在的自己。先停一下。看看自己真正想要的是什麼。
+              </p>
+            </div>
+
+            <div class="bg-white rounded-3xl p-6 sm:p-8 border border-morandi-accentSoft/80 shadow-soft">
+              <h4 class="font-serif-custom text-base font-medium text-morandi-dark mb-2.5 text-morandi-accent">
+                「我什麼都不知道。」
+              </h4>
+              <p class="text-xs sm:text-sm text-morandi-dark/80 font-light leading-relaxed">
+                那就先承認不知道。把「我想要的」、「我做得到的」、以及「我還不知道的」分開。未知，不需要現在就被解決。
+              </p>
+            </div>
+
+            <div class="bg-white rounded-3xl p-6 sm:p-8 border border-morandi-accentSoft/80 shadow-soft">
+              <h4 class="font-serif-custom text-base font-medium text-morandi-dark mb-2.5 text-morandi-sage">
+                「我已經很累了。」
+              </h4>
+              <p class="text-xs sm:text-sm text-morandi-dark/80 font-light leading-relaxed">
+                總是在服務別人的你，也該好好服務自己一天了。
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- CTA SECTION -->
+      <section class="py-20 md:py-28 bg-[#EDE5DC] border-t border-morandi-accentSoft/60">
+        <div class="max-w-3xl mx-auto px-6 text-center space-y-6">
+          <span class="text-[11px] text-morandi-accent tracking-[0.25em] font-eng-serif uppercase font-semibold block">NEXT STEP</span>
+          
+          <h2 class="text-2xl md:text-4xl font-serif-custom font-medium text-morandi-dark leading-snug tracking-wide">
+            你不用現在就知道答案。<br>但如果你願意，我們可以成為你的樹洞。
+          </h2>
+
+          <p class="text-xs sm:text-sm text-morandi-dark/80 leading-relaxed font-light max-w-xl mx-auto">
+            也許是一場對話。也許是一張牌。也許是一堂課。也許只是一次新的嘗試。<br>
+            改變不一定要從很大的決定開始。有時候，只是先讓自己走到另一條路上，看看那裡有什麼。
+          </p>
+
+          <div class="pt-6 flex flex-wrap justify-center gap-4">
+            <button onclick="openConsultModal()" class="px-8 py-3.5 rounded-full bg-morandi-primary hover:bg-morandi-dark text-white text-xs tracking-[0.2em] font-medium shadow-soft hover:shadow-card active:scale-95 transition-all">
+              預約聊聊諮詢
+            </button>
+            <button onclick="navTo('service-jewelry')" class="px-8 py-3.5 rounded-full bg-white hover:bg-morandi-bg text-morandi-dark border border-morandi-accentSoft text-xs tracking-[0.2em] font-medium active:scale-95 transition-all">
+              看看近期課程
+            </button>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+
+    <!-- ========================================================= -->
+    <!-- VIEW 2: SERVICE DETAIL - CAREER COACHING (#service-career) -->
+    <!-- ========================================================= -->
+    <div id="view-service-career" class="spa-view hidden">
+      <div class="max-w-4xl mx-auto px-4 py-12 md:py-20">
+        
+        <button onclick="goBackToOrigin()" class="inline-flex items-center text-xs text-morandi-muted hover:text-morandi-dark mb-8 tracking-widest active:scale-95 transition-all">
+          <i class="fa-solid fa-arrow-left mr-2 text-[10px]"></i> 返回
+        </button>
+
+        <div class="w-full bg-gradient-to-r from-[#FAF5EF] via-[#EFE5D8] to-[#E3D5C3] rounded-3xl p-8 md:p-12 mb-10 relative overflow-hidden shadow-card border border-morandi-accent/30 flex flex-col justify-between min-h-[320px]">
+          
+          <svg class="absolute inset-0 w-full h-full object-cover pointer-events-none opacity-40" viewBox="0 0 800 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="680" cy="90" r="110" fill="#C5A059" fill-opacity="0.25"/>
+            <path d="M0 240 Q300 180 500 250 T800 200 L800 320 L0 320 Z" fill="#D8C8B5" fill-opacity="0.5"/>
+            <path d="M0 270 Q400 210 800 260 L800 320 L0 320 Z" fill="#BFA78F" fill-opacity="0.4"/>
+            <path d="M420 320 Q480 230 520 200" stroke="#C5A059" stroke-width="3" stroke-dasharray="6 6"/>
+          </svg>
+
+          <div class="relative z-10 flex justify-between items-center mb-6">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1 bg-white/80 backdrop-blur-md rounded-full text-[11px] font-medium text-morandi-dark shadow-sm">
+              <span class="w-2 h-2 rounded-full bg-morandi-accent"></span>
+              職涯諮詢 · 一對一對話
+            </div>
+            <span class="text-xs font-eng-serif font-medium tracking-widest text-morandi-muted/80">02 / CAREER</span>
+          </div>
+
+          <div class="relative z-10 max-w-xl my-auto">
+            <span class="text-[10px] tracking-[0.25em] text-morandi-terracotta font-eng-serif font-semibold uppercase block mb-2">NEW PATHWAYS</span>
+            <h1 class="text-3xl md:text-5xl font-serif-custom font-medium text-morandi-dark leading-tight mb-4 tracking-wide">
+              走舊路，到不了新地方
+            </h1>
+            <p class="text-xs sm:text-sm text-morandi-dark/80 font-light leading-relaxed mb-6">
+              讓我陪你出發，看看新道路上有什麼驚喜。<br>
+              不知道下一步怎麼走，可以先說說現在卡在哪裡。
+            </p>
+
+            <div class="flex flex-wrap gap-2 text-[11px]">
+              <span class="px-3 py-1 bg-white/90 rounded-full border border-morandi-accent/30 text-morandi-dark font-medium">職涯探索</span>
+              <span class="px-3 py-1 bg-white/90 rounded-full border border-morandi-accent/30 text-morandi-dark font-medium">方向釐清</span>
+              <span class="px-3 py-1 bg-white/90 rounded-full border border-morandi-accent/30 text-morandi-dark font-medium">履歷健檢</span>
+              <span class="px-3 py-1 bg-white/90 rounded-full border border-morandi-accent/30 text-morandi-dark font-medium">求職策略</span>
+            </div>
+          </div>
+
+          <div class="relative z-10 pt-4 border-t border-morandi-dark/10 flex justify-between items-center text-[11px] text-morandi-muted">
+            <span>OH Card × 星盤 × 人生教練</span>
+            <span class="font-eng-serif italic">Wishing Elephant Studio</span>
+          </div>
+
+        </div>
+
+        <div class="bg-white rounded-3xl p-8 md:p-10 border border-morandi-accentSoft/80 shadow-soft mb-10">
+          <p class="text-xs sm:text-sm text-morandi-dark/80 font-light leading-relaxed">
+            工作不只是「要不要換工作」。也可以重新看看：我喜歡什麼？我擅長什麼？我在意什麼？什麼樣的工作方式比較適合現在的我？
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+          
+          <div class="md:col-span-2 space-y-6 text-xs sm:text-sm text-morandi-dark/85 leading-relaxed font-light">
+            <div class="bg-white rounded-2xl p-6 border border-morandi-accentSoft/80">
+              <h3 class="font-serif-custom font-medium text-morandi-dark text-base mb-3">服務特色與理念</h3>
+              <p>
+                不是幫你做決定，而是陪你看見更多選擇。擁有超過 100 份履歷健檢與跨領域職涯諮詢實戰經驗，結合科技、金融與產品經理跨界邏輯，協助你將職涯迷惘拆解成可執行的小步嘗試。
+              </p>
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 border border-morandi-accentSoft/80">
+              <h3 class="font-serif-custom font-medium text-morandi-dark text-base mb-3">適合這樣的你</h3>
+              <ul class="space-y-2 list-disc list-inside text-morandi-dark/80">
+                <li>工作卡住，每天都在猶豫要不要裸辭或轉換跑道。</li>
+                <li>履歷投遞屢屢受挫，不確定自己的優勢在哪裡。</li>
+                <li>渴望建立有熱情、能發展第二專長的職涯路徑。</li>
+                <li>只是想找個有商業邏輯又懂心靈脈絡的人好好聊聊。</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="bg-morandi-card p-6 rounded-3xl border border-morandi-accentSoft/80 flex flex-col justify-between">
+            <div>
+              <span class="text-[10px] text-morandi-accent font-eng-serif font-semibold tracking-widest uppercase block mb-1">ONE-ON-ONE</span>
+              <h4 class="font-serif-custom text-lg font-medium text-morandi-dark mb-2">一對一深度對話</h4>
+              <p class="text-xs text-morandi-muted mb-6">單次 60-90 分鐘 / 線上實體皆可</p>
+              <p class="text-xs text-morandi-dark/80 mb-6 font-light leading-relaxed">
+                包含事前履歷/痛點問券調研，對話後提供專屬行動建議簡報與次步指引。
+              </p>
+            </div>
+            <button onclick="openConsultModal('職涯諮詢與一對一')" class="w-full py-3 rounded-full bg-morandi-primary hover:bg-morandi-dark text-white text-xs tracking-widest font-medium shadow-sm active:scale-95 transition-all">
+              預約職涯對話
+            </button>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+
+    <!-- ============================================================== -->
+    <!-- VIEW 3: SERVICE DETAIL - JEWELRY CLASS (#service-jewelry)      -->
+    <!-- ============================================================== -->
+    <div id="view-service-jewelry" class="spa-view hidden">
+      <div class="max-w-5xl mx-auto px-4 py-12 md:py-20">
+        
+        <button onclick="goBackToOrigin()" class="inline-flex items-center text-xs text-morandi-muted hover:text-morandi-dark mb-8 tracking-widest active:scale-95 transition-all">
+          <i class="fa-solid fa-arrow-left mr-2 text-[10px]"></i> 返回
+        </button>
+
+        <div class="w-full bg-gradient-to-br from-[#FAF5EE] via-[#EFE6D8] to-[#E2D4C0] rounded-3xl p-8 md:p-12 mb-10 relative overflow-hidden shadow-card border border-morandi-accent/30 flex flex-col justify-between min-h-[340px]">
+          
+          <svg class="absolute inset-0 w-full h-full object-cover pointer-events-none opacity-40" viewBox="0 0 800 340" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="720" cy="120" r="140" fill="#C5A059" fill-opacity="0.15"/>
+            <polygon points="680,60 720,20 760,60 720,130" stroke="#C5A059" stroke-width="1.5" fill="none"/>
+          </svg>
+
+          <div class="relative z-10 flex justify-between items-center mb-4">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1 bg-white/90 backdrop-blur-md rounded-full text-[11px] font-medium text-morandi-dark shadow-sm">
+              <i class="fa-solid fa-gem text-morandi-accent text-[10px]"></i>
+              輕珠寶設計學院 · 實體創業培訓班
+            </div>
+          </div>
+
+          <div class="relative z-10 max-w-2xl my-auto">
+            <span class="text-[10px] tracking-[0.25em] text-morandi-accent font-eng-serif font-semibold uppercase block mb-1">WISHING ELEPHANT STUDIO</span>
+            <h1 class="text-3xl md:text-5xl font-serif-custom font-medium text-morandi-dark tracking-wide leading-tight mb-3">
+              讓生活閃閃發光
+            </h1>
+            <p class="font-eng-serif text-lg md:text-xl text-morandi-primary font-medium italic mb-4 tracking-wider">
+              Love & Beauty. Our Faith.
+            </p>
+            <p class="text-xs sm:text-sm text-morandi-dark/80 font-light leading-relaxed mb-6">
+              用 美 × 創造 × 體驗，設計日常生活中的靈光乍現。<br>
+              二天學會完整輕珠寶設計技法，打造不同於市面常見款式的專屬設計作品。
+            </p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+              <div class="bg-white/85 backdrop-blur-xs p-3.5 rounded-2xl border border-morandi-accent/20 flex items-center gap-3">
+                <div class="w-8 h-8 rounded-full bg-morandi-accentSoft/60 text-morandi-accent flex items-center justify-center font-bold text-xs">美</div>
+                <div>
+                  <span class="block text-xs font-eng-serif font-semibold text-morandi-dark tracking-wider">BEAUTY</span>
+                  <span class="text-[10px] text-morandi-muted font-light">看見你的本質</span>
+                </div>
+              </div>
+              <div class="bg-white/85 backdrop-blur-xs p-3.5 rounded-2xl border border-morandi-accent/20 flex items-center gap-3">
+                <div class="w-8 h-8 rounded-full bg-morandi-accentSoft/60 text-morandi-accent flex items-center justify-center font-bold text-xs">創</div>
+                <div>
+                  <span class="block text-xs font-eng-serif font-semibold text-morandi-dark tracking-wider">CREATIVITY</span>
+                  <span class="text-[10px] text-morandi-muted font-light">重新組合創造可能</span>
+                </div>
+              </div>
+              <div class="bg-white/85 backdrop-blur-xs p-3.5 rounded-2xl border border-morandi-accent/20 flex items-center gap-3">
+                <div class="w-8 h-8 rounded-full bg-morandi-accentSoft/60 text-morandi-accent flex items-center justify-center font-bold text-xs">體</div>
+                <div>
+                  <span class="block text-xs font-eng-serif font-semibold text-morandi-dark tracking-wider">EXPERIENCE</span>
+                  <span class="text-[10px] text-morandi-muted font-light">打造讓人記得的內容</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="relative z-10 pt-4 mt-6 border-t border-morandi-dark/10 flex justify-between items-center text-[11px] text-morandi-muted">
+            <span>若現狀為待業者提供特別優惠</span>
+            <span>小班精緻教學 (2~4人)</span>
+          </div>
+
+        </div>
+
+        <h3 class="text-xl font-serif-custom font-medium text-morandi-dark text-center mb-8 tracking-wide">
+          課程六大實體核心學習單元
+        </h3>
+
+        <!-- Core Units 01-06 -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-6 gap-4 mb-14">
+          
+          <div class="bg-white rounded-2xl p-5 border border-morandi-accentSoft/80 shadow-soft text-center">
+            <div class="w-8 h-8 rounded-full bg-morandi-accentSoft text-morandi-dark text-xs font-bold flex items-center justify-center mx-auto mb-3">01</div>
+            <h4 class="font-serif-custom font-medium text-morandi-dark text-sm mb-2">材料 × 市場</h4>
+            <ul class="text-[11px] text-morandi-muted space-y-1 font-light">
+              <li>常用材料認識</li>
+              <li>市場趨勢分析</li>
+              <li>定價策略計算</li>
+            </ul>
+          </div>
+
+          <div class="bg-white rounded-2xl p-5 border border-morandi-accentSoft/80 shadow-soft text-center">
+            <div class="w-8 h-8 rounded-full bg-morandi-accentSoft text-morandi-dark text-xs font-bold flex items-center justify-center mx-auto mb-3">02</div>
+            <h4 class="font-serif-custom font-medium text-morandi-dark text-sm mb-2">設計 × 能量</h4>
+            <ul class="text-[11px] text-morandi-muted space-y-1 font-light">
+              <li>脈輪能量運用</li>
+              <li>生命靈數色彩</li>
+              <li>命理元素融入</li>
+            </ul>
+          </div>
+
+          <div class="bg-white rounded-2xl p-5 border border-morandi-accentSoft/80 shadow-soft text-center">
+            <div class="w-8 h-8 rounded-full bg-morandi-accentSoft text-morandi-dark text-xs font-bold flex items-center justify-center mx-auto mb-3">03</div>
+            <h4 class="font-serif-custom font-medium text-morandi-dark text-sm mb-2">作品實作</h4>
+            <ul class="text-[11px] text-morandi-muted space-y-1 font-light">
+              <li>不同串法手環</li>
+              <li>設計款項鍊/耳環</li>
+              <li>神聖串珠/唸珠</li>
+            </ul>
+          </div>
+
+          <div class="bg-white rounded-2xl p-5 border border-morandi-accentSoft/80 shadow-soft text-center">
+            <div class="w-8 h-8 rounded-full bg-morandi-accentSoft text-morandi-dark text-xs font-bold flex items-center justify-center mx-auto mb-3">04</div>
+            <h4 class="font-serif-custom font-medium text-morandi-dark text-sm mb-2">飾品搭配</h4>
+            <ul class="text-[11px] text-morandi-muted space-y-1 font-light">
+              <li>臉型膚色調整</li>
+              <li>日常穿搭邏輯</li>
+              <li>職業形象建議</li>
+            </ul>
+          </div>
+
+          <div class="bg-white rounded-2xl p-5 border border-morandi-accentSoft/80 shadow-soft text-center">
+            <div class="w-8 h-8 rounded-full bg-morandi-accentSoft text-morandi-dark text-xs font-bold flex items-center justify-center mx-auto mb-3">05</div>
+            <h4 class="font-serif-custom font-medium text-morandi-dark text-sm mb-2">飾品保養</h4>
+            <ul class="text-[11px] text-morandi-muted space-y-1 font-light">
+              <li>天然水晶淨化</li>
+              <li>金屬日常保養</li>
+              <li>能量維持與照顧</li>
+            </ul>
+          </div>
+
+          <div class="bg-white rounded-2xl p-5 border border-morandi-accentSoft/80 shadow-soft text-center">
+            <div class="w-8 h-8 rounded-full bg-morandi-accentSoft text-morandi-dark text-xs font-bold flex items-center justify-center mx-auto mb-3">06</div>
+            <h4 class="font-serif-custom font-medium text-morandi-dark text-sm mb-2">商業思維</h4>
+            <ul class="text-[11px] text-morandi-muted space-y-1 font-light">
+              <li>品牌定位建立</li>
+              <li>客製接單流程</li>
+              <li>商業推廣策略</li>
+            </ul>
+          </div>
+
+        </div>
+
+        <!-- Master Skills & Target Audience -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+          <div class="bg-white rounded-3xl p-8 border border-morandi-accentSoft/80">
+            <h4 class="font-serif-custom text-lg font-medium text-morandi-dark mb-4">你將掌握的專業技能</h4>
+            <div class="grid grid-cols-2 gap-3 text-xs text-morandi-dark/80 font-light">
+              <div class="flex items-center gap-2"><i class="fa-solid fa-check text-morandi-accent text-[10px]"></i> 多樣化串珠手法</div>
+              <div class="flex items-center gap-2"><i class="fa-solid fa-check text-morandi-accent text-[10px]"></i> 彈性線與線材應用</div>
+              <div class="flex items-center gap-2"><i class="fa-solid fa-check text-morandi-accent text-[10px]"></i> 金屬配件精緻搭配</div>
+              <div class="flex items-center gap-2"><i class="fa-solid fa-check text-morandi-accent text-[10px]"></i> 廣泛層次搭配技巧</div>
+              <div class="flex items-center gap-2"><i class="fa-solid fa-check text-morandi-accent text-[10px]"></i> 能量與品牌定位</div>
+              <div class="flex items-center gap-2"><i class="fa-solid fa-check text-morandi-accent text-[10px]"></i> 客製化訂製接單</div>
+            </div>
+          </div>
+
+          <div class="bg-morandi-card rounded-3xl p-8 border border-morandi-accentSoft/80 flex flex-col justify-between">
+            <div>
+              <h4 class="font-serif-custom text-lg font-medium text-morandi-dark mb-2">適合對象</h4>
+              <p class="text-xs text-morandi-dark/80 font-light leading-relaxed mb-6">
+                想提升作品質感與設計能力者、想學習能量設計並建立個人風格者、喜歡水晶與美學並希望發展第二收入者。
+              </p>
+            </div>
+            <button onclick="openConsultModal('輕珠寶創業課')" class="w-full py-3.5 rounded-full bg-morandi-primary hover:bg-morandi-dark text-white text-xs tracking-widest font-medium shadow-sm active:scale-95 transition-all">
+              預約課程報名諮詢
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+    <!-- =================================================================== -->
+    <!-- VIEW 4: SERVICE DETAIL - OH CARD & HUMAN DESIGN (#service-humandesign)-->
+    <!-- =================================================================== -->
+    <div id="view-service-humandesign" class="spa-view hidden">
+      <div class="max-w-4xl mx-auto px-4 py-12 md:py-20">
+        
+        <button onclick="goBackToOrigin()" class="inline-flex items-center text-xs text-morandi-muted hover:text-morandi-dark mb-8 tracking-widest active:scale-95 transition-all">
+          <i class="fa-solid fa-arrow-left mr-2 text-[10px]"></i> 返回
+        </button>
+
+        <div class="w-full bg-gradient-to-br from-[#161F2C] via-[#1A2636] to-[#0E1520] text-white rounded-3xl p-8 md:p-12 mb-10 relative overflow-hidden shadow-card border border-morandi-nightGold/30 flex flex-col justify-between min-h-[340px]">
+          
+          <svg class="absolute inset-0 w-full h-full object-cover pointer-events-none opacity-40" viewBox="0 0 800 340" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M100 80 A 40 40 0 1 0 130 130 A 32 32 0 1 1 100 80 Z" fill="#E5C07B" fill-opacity="0.8"/>
+            <circle cx="680" cy="180" r="120" stroke="#E5C07B" stroke-width="1" stroke-dasharray="4 4" opacity="0.6"/>
+          </svg>
+
+          <div class="relative z-10 flex justify-between items-center mb-6">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1 bg-white/10 backdrop-blur-md rounded-full text-[11px] font-medium text-morandi-nightGold border border-morandi-nightGold/30">
+              <i class="fa-regular fa-moon text-[10px]"></i>
+              探索自我 · OH Card
+            </div>
+            <span class="text-xs font-eng-serif tracking-widest text-white/50">01 / DISCOVERY</span>
+          </div>
+
+          <div class="relative z-10 max-w-xl my-auto">
+            <span class="text-[10px] tracking-[0.25em] text-morandi-nightGold font-eng-serif font-semibold uppercase block mb-2">SELF INSIGHT</span>
+            <h1 class="text-3xl md:text-5xl font-serif-custom font-medium text-white tracking-wide leading-tight mb-4">
+              讓卡片說故事
+            </h1>
+            <p class="text-xs sm:text-sm text-white/80 font-light leading-relaxed mb-6">
+              用第三人稱，陪你看見真相與方向。<br>
+              OH Card 像一張地形快照，幫助我們看見站在哪裡；星盤則提供理解自己的另一種維度。
+            </p>
+
+            <div class="flex flex-wrap gap-2 text-[11px]">
+              <span class="px-3 py-1 bg-morandi-nightGold/20 rounded-full border border-morandi-nightGold/30 text-morandi-nightGold">自我探索</span>
+              <span class="px-3 py-1 bg-morandi-nightGold/20 rounded-full border border-morandi-nightGold/30 text-morandi-nightGold">釐清方向</span>
+              <span class="px-3 py-1 bg-morandi-nightGold/20 rounded-full border border-morandi-nightGold/30 text-morandi-nightGold">看見可能</span>
+            </div>
+          </div>
+
+          <div class="relative z-10 pt-4 mt-4 border-t border-white/10 flex justify-between items-center text-[11px] text-white/50">
+            <span>改變的起點 · 許願象工作室</span>
+            <span class="font-eng-serif italic">Intuition & Astrology</span>
+          </div>
+
+        </div>
+
+        <div class="bg-white rounded-3xl p-8 md:p-10 border border-morandi-accentSoft/80 shadow-soft mb-10">
+          <p class="text-xs sm:text-sm text-morandi-dark/80 font-light leading-relaxed">
+            有些答案不是「想」出來的。透過對話、牌卡、星盤與提問，換一個角度看看自己正在經歷什麼。當那些幽微心事終於被看見，這種了解本身就帶來溫柔包容。
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+          <div class="bg-white rounded-3xl p-8 border border-morandi-accentSoft/80">
+            <h3 class="font-serif-custom font-medium text-morandi-dark text-lg mb-3">OH Card 潛意識投射</h3>
+            <p class="text-xs text-morandi-dark/80 font-light leading-relaxed">
+              OH Card 像一張地形快照，幫助我們看見自己現在站在哪裡。用第三人的角度，看見那些平常很難說出口的感受，讓卡片替你說故事。
+            </p>
+          </div>
+
+          <div class="bg-white rounded-3xl p-8 border border-morandi-accentSoft/80">
+            <h3 class="font-serif-custom font-medium text-morandi-dark text-lg mb-3">個人星盤本質理解</h3>
+            <p class="text-xs text-morandi-dark/80 font-light leading-relaxed">
+              星盤提供另一種理解自己的方式。看見天生的能量設定與天賦，停止拿別人的範本來苛求自己。
+            </p>
+          </div>
+        </div>
+
+        <div class="text-center bg-morandi-card p-8 rounded-3xl border border-morandi-accentSoft/80">
+          <h4 class="font-serif-custom text-lg font-medium text-morandi-dark mb-3">預約 OH Card × 星盤一對一諮詢</h4>
+          <p class="text-xs text-morandi-muted mb-6 font-light">帶著你的迷惘與好奇來，我們一起坐下來看清楚。</p>
+          <button onclick="openConsultModal('OH Card × 個人星盤')" class="px-8 py-3 rounded-full bg-morandi-primary text-white text-xs font-medium tracking-widest hover:bg-morandi-dark active:scale-95 transition-all">
+            預約對談
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+
+    <!-- ============================================================= -->
+    <!-- VIEW 5: SERVICE DETAIL - CRYSTAL & BODY (#service-crystaltree) -->
+    <!-- ============================================================= -->
+    <div id="view-service-crystaltree" class="spa-view hidden">
+      <div class="max-w-4xl mx-auto px-4 py-12 md:py-20">
+        
+        <button onclick="goBackToOrigin()" class="inline-flex items-center text-xs text-morandi-muted hover:text-morandi-dark mb-8 tracking-widest active:scale-95 transition-all">
+          <i class="fa-solid fa-arrow-left mr-2 text-[10px]"></i> 返回
+        </button>
+
+        <div class="w-full bg-gradient-to-br from-[#EAEFE6] via-[#DCE4D6] to-[#C9D4C2] rounded-3xl p-8 md:p-12 mb-10 relative overflow-hidden shadow-card border border-morandi-sage/30 flex flex-col justify-between min-h-[320px]">
+          
+          <svg class="absolute inset-0 w-full h-full object-cover pointer-events-none opacity-30" viewBox="0 0 800 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="400" cy="160" r="100" stroke="#8A9A86" stroke-width="1" stroke-dasharray="4 4"/>
+            <circle cx="400" cy="160" r="160" stroke="#8A9A86" stroke-width="1.2"/>
+          </svg>
+
+          <div class="relative z-10 flex justify-between items-center mb-6">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1 bg-white/80 backdrop-blur-md rounded-full text-[11px] font-medium text-morandi-sage shadow-sm">
+              <i class="fa-solid fa-wind text-[10px]"></i>
+              讓身體鬆下來 · 主題體驗工作坊
+            </div>
+            <span class="text-xs font-eng-serif tracking-widest text-morandi-dark/50">05 / RELAXATION</span>
+          </div>
+
+          <div class="relative z-10 max-w-xl my-auto">
+            <span class="text-[10px] tracking-[0.25em] text-morandi-sage font-eng-serif font-semibold uppercase block mb-2">SOUND & BREATH</span>
+            <h1 class="text-3xl md:text-5xl font-serif-custom font-medium text-morandi-dark tracking-wide leading-tight mb-4">
+              讓身體先鬆下來
+            </h1>
+            <p class="text-xs sm:text-sm text-morandi-dark/80 font-light leading-relaxed mb-6">
+              頌缽音療 · 呼吸課 · 瑜珈靜心 · 水晶空間場域。<br>
+              當腦袋想得太多時，先讓身體鬆開。讓頻率撫平疲憊的神經系統。
+            </p>
+
+            <div class="flex flex-wrap gap-2 text-[11px]">
+              <span class="px-3 py-1 bg-white/90 rounded-full border border-morandi-sage/30 text-morandi-dark">頌缽共振</span>
+              <span class="px-3 py-1 bg-white/90 rounded-full border border-morandi-sage/30 text-morandi-dark">深層呼吸</span>
+              <span class="px-3 py-1 bg-white/90 rounded-full border border-morandi-sage/30 text-morandi-dark">身心淨化</span>
+            </div>
+          </div>
+
+          <div class="relative z-10 pt-4 mt-4 border-t border-morandi-dark/10 flex justify-between items-center text-[11px] text-morandi-muted">
+            <span>許願象工作室 · 靜心系列</span>
+            <span class="font-eng-serif italic">Mindfulness & Rest</span>
+          </div>
+
+        </div>
+
+        <div class="bg-white rounded-3xl p-8 md:p-10 border border-morandi-accentSoft/80 shadow-soft mb-10">
+          <p class="text-xs sm:text-sm text-morandi-dark/80 font-light leading-relaxed">
+            當腦袋想得太多時，先讓身體鬆開。透過聲波頌缽共振、呼吸調整與水晶空間能量靜心，把緊繃的感知慢慢放開。
+          </p>
+        </div>
+
+        <div class="bg-white rounded-3xl p-8 border border-morandi-accentSoft/80 mb-10">
+          <h3 class="font-serif-custom font-medium text-morandi-dark text-lg mb-4">主題體驗課程</h3>
+          <ul class="space-y-4 text-xs text-morandi-dark/80 font-light">
+            <li class="p-4 bg-morandi-bg rounded-2xl">
+              <strong class="font-serif-custom text-sm text-morandi-dark block mb-1">頌缽與音療靜心</strong>
+              讓頻率撫平疲憊的神經系統，找回深度睡眠與鬆弛感。
+            </li>
+            <li class="p-4 bg-morandi-bg rounded-2xl">
+              <strong class="font-serif-custom text-sm text-morandi-dark block mb-1">水晶手作擺件與能量調整</strong>
+              結合水晶美學與空間場域，為生活空間點亮一盞靜謐溫柔的燈。
+            </li>
+          </ul>
+        </div>
+
+        <div class="text-center">
+          <button onclick="openConsultModal('身心鬆弛體驗')" class="px-8 py-3 rounded-full bg-morandi-primary text-white text-xs font-medium tracking-widest hover:bg-morandi-dark active:scale-95 transition-all">
+            洽詢團體或個人靜心體驗
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+
+    <!-- ============================================================ -->
+    <!-- VIEW 6: SERVICE DETAIL - LIFE COACH (#service-lifecoach)     -->
+    <!-- ============================================================ -->
+    <div id="view-service-lifecoach" class="spa-view hidden">
+      <div class="max-w-4xl mx-auto px-4 py-12 md:py-20">
+        
+        <button onclick="goBackToOrigin()" class="inline-flex items-center text-xs text-morandi-muted hover:text-morandi-dark mb-8 tracking-widest active:scale-95 transition-all">
+          <i class="fa-solid fa-arrow-left mr-2 text-[10px]"></i> 返回
+        </button>
+
+        <div class="w-full bg-gradient-to-br from-[#F5ECE2] via-[#E8DBD0] to-[#DAC9BB] rounded-3xl p-8 md:p-12 mb-10 relative overflow-hidden shadow-card border border-morandi-accentSoft/80 flex flex-col justify-between min-h-[320px]">
+          
+          <svg class="absolute inset-0 w-full h-full object-cover pointer-events-none opacity-30" viewBox="0 0 800 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="650,40 730,120 670,220 590,140" stroke="#C5A059" stroke-width="1.2" fill="none"/>
+          </svg>
+
+          <div class="relative z-10 flex justify-between items-center mb-6">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1 bg-white/80 backdrop-blur-md rounded-full text-[11px] font-medium text-morandi-dark shadow-sm">
+              <i class="fa-solid fa-flask text-morandi-accent text-[10px]"></i>
+              新生活實驗室 · 主題工作坊
+            </div>
+            <span class="text-xs font-eng-serif tracking-widest text-morandi-dark/50">04 / EXPERIMENTS</span>
+          </div>
+
+          <div class="relative z-10 max-w-xl my-auto">
+            <span class="text-[10px] tracking-[0.25em] text-morandi-terracotta font-eng-serif font-semibold uppercase block mb-2">NEW POSSIBILITIES</span>
+            <h1 class="text-3xl md:text-5xl font-serif-custom font-medium text-morandi-dark tracking-wide leading-tight mb-4">
+              想試試看新的可能
+            </h1>
+            <p class="text-xs sm:text-sm text-morandi-dark/80 font-light leading-relaxed mb-6">
+              讓我們陪你走一段，從選定一件小事開始，看看自己會走去哪裡。<br>
+              不一定要得到驚天動地的答案，有時候，只是換一個地方，事情就開始有了新的角度。
+            </p>
+
+            <div class="flex flex-wrap gap-2 text-[11px]">
+              <span class="px-3 py-1 bg-white/90 rounded-full border border-morandi-accentSoft text-morandi-dark">主題工作坊</span>
+              <span class="px-3 py-1 bg-white/90 rounded-full border border-morandi-accentSoft text-morandi-dark">生活嘗試</span>
+              <span class="px-3 py-1 bg-white/90 rounded-full border border-morandi-accentSoft text-morandi-dark">跨界對談</span>
+            </div>
+          </div>
+
+          <div class="relative z-10 pt-4 mt-4 border-t border-morandi-dark/10 flex justify-between items-center text-[11px] text-morandi-muted">
+            <span>許願象工作室 · 生活實驗</span>
+            <span class="font-eng-serif italic">Small Steps Forward</span>
+          </div>
+
+        </div>
+
+        <div class="bg-white rounded-3xl p-8 md:p-10 border border-morandi-accentSoft/80 shadow-soft mb-10">
+          <p class="text-xs sm:text-sm text-morandi-dark/80 font-light leading-relaxed">
+            有時候只是需要一個下午，離開原本的生活軌道。做點創作、認識新的方法，跟不同的人聊聊。不一定要得到什麼驚天動地的答案，有時候，只是換一個地方，事情就開始有了新的角度。
+          </p>
+        </div>
+
+        <div class="text-center bg-white p-8 rounded-3xl border border-morandi-accentSoft/80">
+          <p class="text-xs text-morandi-dark/80 font-light mb-6">歡迎關注近期舉辦的主題工作坊與小聚行動。</p>
+          <button onclick="openConsultModal('新生活實驗室')" class="px-8 py-3 rounded-full bg-morandi-primary text-white text-xs font-medium tracking-widest hover:bg-morandi-dark active:scale-95 transition-all">
+            預約報名與最新活動通知
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+
+    <!-- ============================================================ -->
+    <!-- VIEW 7: SERVICE DETAIL - WEALTH CARDS (#service-wealth)       -->
+    <!-- ============================================================ -->
+    <div id="view-service-wealth" class="spa-view hidden">
+      <div class="max-w-4xl mx-auto px-4 py-12 md:py-20">
+        
+        <button onclick="goBackToOrigin()" class="inline-flex items-center text-xs text-morandi-muted hover:text-morandi-dark mb-8 tracking-widest active:scale-95 transition-all">
+          <i class="fa-solid fa-arrow-left mr-2 text-[10px]"></i> 返回
+        </button>
+
+        <div class="w-full bg-gradient-to-br from-[#FAF2E6] via-[#EEDEB8] to-[#DFC696] rounded-3xl p-8 md:p-12 mb-10 relative overflow-hidden shadow-card border border-morandi-accent/30 flex flex-col justify-between min-h-[320px]">
+          
+          <svg class="absolute inset-0 w-full h-full object-cover pointer-events-none opacity-30" viewBox="0 0 800 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="700" cy="160" r="110" stroke="#C5A059" stroke-width="1.5"/>
+          </svg>
+
+          <div class="relative z-10 flex justify-between items-center mb-6">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1 bg-white/90 backdrop-blur-md rounded-full text-[11px] font-medium text-morandi-dark shadow-sm">
+              <i class="fa-solid fa-coins text-morandi-accent text-[10px]"></i>
+              財神卡 · 觀點對話
+            </div>
+            <span class="text-xs font-eng-serif tracking-widest text-morandi-dark/50">MONEY & BELIEFS</span>
+          </div>
+
+          <div class="relative z-10 max-w-xl my-auto">
+            <span class="text-[10px] tracking-[0.25em] text-morandi-accent font-eng-serif font-semibold uppercase block mb-2">VALUE & PERSPECTIVE</span>
+            <h1 class="text-3xl md:text-5xl font-serif-custom font-medium text-morandi-dark tracking-wide leading-tight mb-4">
+              一張卡，一個問題
+            </h1>
+            <p class="text-xs sm:text-sm text-morandi-dark/80 font-light leading-relaxed mb-6">
+              重新問自己一次關於價值的問題，就會看見不一樣的答案。<br>
+              金錢不只是數字，更是我們對自我的認知與安全感的投射。
+            </p>
+
+            <div class="flex flex-wrap gap-2 text-[11px]">
+              <span class="px-3 py-1 bg-white/90 rounded-full border border-morandi-accent/30 text-morandi-dark">金錢信念</span>
+              <span class="px-3 py-1 bg-white/90 rounded-full border border-morandi-accent/30 text-morandi-dark">價值拆解</span>
+              <span class="px-3 py-1 bg-white/90 rounded-full border border-morandi-accent/30 text-morandi-dark">心態對話</span>
+            </div>
+          </div>
+
+          <div class="relative z-10 pt-4 mt-4 border-t border-morandi-dark/10 flex justify-between items-center text-[11px] text-morandi-muted">
+            <span>許願象工作室 · 金錢探索</span>
+            <span class="font-eng-serif italic">Mindful Wealth</span>
+          </div>
+
+        </div>
+
+        <div class="bg-white rounded-3xl p-8 md:p-10 border border-morandi-accentSoft/80 shadow-soft mb-10">
+          <p class="text-xs sm:text-sm text-morandi-dark/80 font-light leading-relaxed">
+            一張卡，一個問題。有時候，重新問自己一次關於價值的問題，就會看見不一樣的答案。金錢不只是數字，更是我們對自我的認知與安全感的投射。
+          </p>
+        </div>
+
+        <div class="text-center">
+          <button onclick="openConsultModal('財神卡諮詢')" class="px-8 py-3 rounded-full bg-morandi-primary text-white text-xs font-medium tracking-widest hover:bg-morandi-dark active:scale-95 transition-all">
+            預約財神卡體驗對談
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+  </main>
+
+
+  <!-- MODAL 1: CONSULTATION BOOKING MODAL -->
+  <div id="consultation-modal" onclick="handleModalBackdropClick(event, 'consultation-modal')" class="fixed inset-0 z-50 bg-morandi-dark/40 backdrop-blur-sm flex items-center justify-center p-4 opacity-0 invisible transition-all duration-300">
+    <div class="bg-white rounded-3xl max-w-lg w-full p-8 border border-morandi-accentSoft/80 shadow-2xl relative transform scale-95 transition-transform duration-300">
+      
+      <button onclick="closeConsultModal()" class="absolute top-6 right-6 text-morandi-muted hover:text-morandi-dark text-lg active:scale-95 transition-transform">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div class="text-center mb-6">
+        <span class="text-[11px] text-morandi-accent tracking-[0.25em] font-eng-serif font-medium uppercase block mb-1">CONNECT WITH US</span>
+        <h3 class="font-serif-custom text-2xl font-medium text-morandi-dark tracking-wide">預約與我們聊聊</h3>
+        <p class="text-xs text-morandi-muted mt-1 font-light">留下您的聯絡方式，我們會溫柔陪伴您安排下一步。</p>
+      </div>
+
+      <form onsubmit="handleConsultSubmit(event)" class="space-y-4 text-xs">
+        <div>
+          <label class="block text-morandi-dark font-medium mb-1">您的稱呼</label>
+          <input type="text" id="consult-name" required placeholder="例如：林小姐 / Eva" class="w-full px-4 py-3 rounded-xl bg-morandi-bg border border-morandi-accentSoft/80 focus:outline-none focus:border-morandi-accent text-xs">
+        </div>
+
+        <div>
+          <label class="block text-morandi-dark font-medium mb-1">聯絡 Email 或 LINE ID</label>
+          <input type="text" id="consult-contact" required placeholder="example@gmail.com 或 LINE ID" class="w-full px-4 py-3 rounded-xl bg-morandi-bg border border-morandi-accentSoft/80 focus:outline-none focus:border-morandi-accent text-xs">
+        </div>
+
+        <div>
+          <label class="block text-morandi-dark font-medium mb-1">感興趣的服務項目</label>
+          <select id="consult-service" class="w-full px-4 py-3 rounded-xl bg-morandi-bg border border-morandi-accentSoft/80 focus:outline-none focus:border-morandi-accent text-xs">
+            <option value="職涯諮詢與一對一">💬 職涯諮詢與一對一對話</option>
+            <option value="輕珠寶創業課">✨ 輕珠寶設計創業培訓班</option>
+            <option value="OH Card × 個人星盤">🧭 OH Card </option>
+            <option value="身心鬆弛體驗">🌿 頌缽與身心鬆弛體驗</option>
+            <option value="新生活實驗室">💡 新生活實驗室主題工作坊</option>
+            <option value="財神卡諮詢">🪙 財神卡對話探索</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="block text-morandi-dark font-medium mb-1">想先跟我們說些什麼（可選）</label>
+          <textarea id="consult-note" rows="3" placeholder="說說你目前的卡關或期待..." class="w-full px-4 py-3 rounded-xl bg-morandi-bg border border-morandi-accentSoft/80 focus:outline-none focus:border-morandi-accent resize-none text-xs"></textarea>
+        </div>
+
+        <button type="submit" class="w-full py-3.5 rounded-full bg-morandi-primary hover:bg-morandi-dark text-white font-medium tracking-[0.2em] shadow-md active:scale-95 transition-all mt-2">
+          送出預約申請
+        </button>
+      </form>
+
+    </div>
+  </div>
+
+
+  <!-- MODAL 2: SAVED QUOTES LIST MODAL -->
+  <div id="saved-quotes-modal" onclick="handleModalBackdropClick(event, 'saved-quotes-modal')" class="fixed inset-0 z-50 bg-morandi-dark/40 backdrop-blur-sm flex items-center justify-center p-4 opacity-0 invisible transition-all duration-300">
+    <div class="bg-white rounded-3xl max-w-md w-full p-6 sm:p-8 border border-morandi-accentSoft/80 shadow-2xl relative max-h-[85vh] flex flex-col transform scale-95 transition-transform duration-300">
+      
+      <div class="flex justify-between items-center pb-4 border-b border-morandi-accentSoft/60 mb-4">
+        <div>
+          <h3 class="font-serif-custom text-xl font-medium text-morandi-dark">我留下的支持小語</h3>
+          <span class="text-[11px] text-morandi-muted font-light">溫柔提醒自己隨時回顧</span>
+        </div>
+        <button onclick="closeSavedQuotesModal()" class="text-morandi-muted hover:text-morandi-dark text-lg active:scale-95 transition-transform">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <div id="saved-quotes-container" class="overflow-y-auto space-y-3 flex-grow pr-1">
+        <!-- Dynamic saved quotes injected here -->
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- TOAST NOTIFICATION -->
+  <div id="toast" class="fixed bottom-6 right-6 z-50 bg-morandi-dark text-white text-xs px-5 py-3 rounded-2xl shadow-card opacity-0 pointer-events-none transition-all duration-300 flex items-center gap-2.5">
+    <i class="fa-solid fa-circle-check text-morandi-accent text-xs"></i>
+    <span id="toast-message">操作完成</span>
+  </div>
+
+  <!-- FLOATING BACK TO TOP BUTTON -->
+  <button id="back-to-top-btn" onclick="scrollToTop()" class="fixed bottom-6 left-6 z-40 p-3 rounded-full bg-white/90 border border-morandi-accent/30 text-morandi-dark shadow-soft hover:shadow-card opacity-0 invisible transition-all duration-300 active:scale-95 focus:outline-none" title="回到頂部">
+    <i class="fa-solid fa-arrow-up text-xs"></i>
+  </button>
+
+
+  <!-- FOOTER SECTION -->
+  <footer class="bg-[#3A322A] text-[#E5DDD5] py-16 border-t border-morandi-accent/20">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row justify-between items-center gap-8 mb-10 pb-10 border-b border-white/10 text-center md:text-left">
+        <div>
+          <h3 class="font-serif-custom text-2xl tracking-widest text-white mb-2 font-medium">十字路口</h3>
+          <p class="text-xs text-white/70 font-light max-w-sm leading-relaxed">
+            給正在改變的人，一個可以停一下、看看自己的地方。
+          </p>
+        </div>
+
+        <div class="flex flex-wrap justify-center gap-6 text-xs text-white/80 font-light tracking-wider">
+          <a href="#home" onclick="navTo('home')" class="hover:text-morandi-accent transition-colors">今日抽卡</a>
+          <a href="#service-career" onclick="navTo('service-career')" class="hover:text-morandi-accent transition-colors">職涯探索</a>
+          <a href="#service-jewelry" onclick="navTo('service-jewelry')" class="hover:text-morandi-accent transition-colors">輕珠寶創作</a>
+          <a href="#service-humandesign" onclick="navTo('service-humandesign')" class="hover:text-morandi-accent transition-colors">OH Card 對談</a>
+          <a href="#service-crystaltree" onclick="navTo('service-crystaltree')" class="hover:text-morandi-accent transition-colors">身心靜心</a>
+        </div>
+      </div>
+
+      <div class="flex flex-col sm:flex-row justify-between items-center text-[11px] text-white/50 space-y-3 sm:space-y-0 font-light">
+        <div>
+          © <span id="year-text"></span> 文字創作 BY Eva / 服務提供:許願象工作室 Wishing Elephant Studio. All rights reserved.
+        </div>
+        <div class="flex items-center gap-4">
+          <span>LINE: @wishingelephant</span>
+          <span>台北市敦化北路222巷3號1樓</span>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+
+  <!-- Firebase Core Imports -->
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+    import { getAuth, signInAnonymously, signInWithCustomToken, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+    import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+
+    const appId = typeof __app_id !== 'undefined' ? __app_id : 'crossroads-wishing-elephant';
+    const firebaseConfig = typeof __firebase_config !== 'undefined' ? JSON.parse(__firebase_config) : {
+      apiKey: "demo-key",
+      authDomain: "demo.firebaseapp.com",
+      projectId: "demo-project"
+    };
+
+    let app, auth, db;
+    let currentUser = null;
+
+    try {
+      app = initializeApp(firebaseConfig);
+      auth = getAuth(app);
+      db = getFirestore(app);
+
+      const token = typeof __initial_auth_token !== 'undefined' ? __initial_auth_token : null;
+      if (token) {
+        signInWithCustomToken(auth, token).catch(() => signInAnonymously(auth));
+      } else {
+        signInAnonymously(auth);
+      }
+
+      onAuthStateChanged(auth, (user) => {
+        if (user) {
+          currentUser = user;
+          window.fbUser = user;
+          window.fbDb = db;
+          window.appId = appId;
+        }
+      });
+    } catch (e) {
+      console.warn("Firebase initialization skipped or operating in local offline mode.");
+    }
+
+    window.saveConsultationToFirebase = async function(data) {
+      if (!db || !currentUser) return;
+      try {
+        const publicCol = collection(db, 'artifacts', appId, 'public', 'data', 'consultations');
+        await addDoc(publicCol, {
+          ...data,
+          userId: currentUser.uid,
+          createdAt: new Date().toISOString()
+        });
+      } catch (err) {
+        console.error("Failed to store Firestore consultation", err);
+      }
+    };
+  </script>
+
+
+  <script>
+    const GOOGLE_APPS_SCRIPT_URL = '';
+
+    const CARDS_DATABASE = [
+      { id: 1, quote: "你一定會迷惘，也會害怕，但那不代表你不夠好。" },
+      { id: 2, quote: "關於未來，你可以先不用知道答案。只要確定，現在的自己不要再做不想做的事，就好了。" },
+      { id: 3, quote: "你真正需要的不是目標，而是容許這段無方向期存在。" },
+      { id: 4, quote: "有些問題，或許根本不需要答案。" },
+      { id: 5, quote: "不要急著填滿裂縫，它反而可能變成一條通道。" },
+      { id: 6, quote: "有些執著已然無謂，有些希望正在悄悄醞釀。" },
+      { id: 7, quote: "充滿疑問地睡去，也沒關係。明天醒來，再看看世界。" },
+      { id: 8, quote: "通往未知的道路，猜疑害怕佔了大多數，但箱子裡裝的，常常沒有想像中可怕。" },
+      { id: 9, quote: "有些事情越用力抵抗，反而越佔據你的生活。" },
+      { id: 10, quote: "過去正在過去，未來正在等待。" },
+      { id: 11, quote: "走舊路，到不了新地方。" },
+      { id: 12, quote: "有時候，試著用其他方式打開人生吧。哪一種都好，只要不是現在這種。" },
+      { id: 13, quote: "當一個人長期做著內心不想做的事，感知會慢慢關掉，連時間都會變得漫長。" },
+      { id: 14, quote: "不要讓恐懼替你做決定。" },
+      { id: 15, quote: "你得先否定「不能怎樣」的框架，才能真正做上喜歡的事。" },
+      { id: 16, quote: "混亂中，只要找到一個能先鬆動的點，整線就有被拉直的可能。" },
+      { id: 17, quote: "在看不清前路的時候，先做一件小小的事。往前踏，路就長出來了。" },
+      { id: 18, quote: "挫折感很容易讓我們開始責怪自己，而自我譴責，往往只會拖慢下一步。" },
+      { id: 19, quote: "所有決定都只是選擇而已，不是結果。" },
+      { id: 20, quote: "有彈性試錯的我，其實很幸福。" },
+      { id: 21, quote: "你真正需要的，也許不是一個目標，而是允許這段沒有方向的日子存在。" },
+      { id: 22, quote: "如果你今天有很多情緒，請抱抱自己。這代表你願意去感受這一切複雜紛亂。" },
+      { id: 23, quote: "傷感需要時間來釋放～沒有人催你，你也別催自己。" },
+      { id: 24, quote: "過去正在過去，它慢慢地長成了現在。" },
+      { id: 25, quote: "未來從不因過去停止開展。" },
+      { id: 26, quote: "再不合時宜的東西，也曾在過去閃耀。" },
+      { id: 27, quote: "別讓別人偷走你的時間。" },
+      { id: 28, quote: "不是每一次告別都會圓滿。有時候，先說再見，才能好好再見。" },
+      { id: 29, quote: "不要對改變別人有所期待。" },
+      { id: 30, quote: "撤退，不是要對方變成你想要的樣子，而是給自己空間，找回跟自己相處的樣子。" },
+      { id: 31, quote: "我允許自己嘗試，我允許自己失誤，我允許自己得到所有美好。" },
+      { id: 32, quote: "看清楚自己真實的樣子，並不妨礙自己想像的樣子。" },
+      { id: 33, quote: "我不需要忙碌才有價值，我存在就在發光。" },
+      { id: 34, quote: "別把擁有些什麼，當作自己的成績單。" },
+      { id: 35, quote: "我不是被挑選的人，我是能主動選擇自己想要什麼的人。" },
+      { id: 36, quote: "理直氣壯地成為自己。" },
+      { id: 37, quote: "不迎合，不虛偽，不討好。" },
+      { id: 38, quote: "仁慈而果決，溫柔而堅定，勇敢但不逞強。" },
+      { id: 39, quote: "不要浪費了那些別人眼裡所謂的困境。" },
+      { id: 40, quote: "我想把自己活成一朵花的樣子，不害怕凋謝，也不急於綻放。" },
+      { id: 41, quote: "人有餘裕，才看得見選擇。" },
+      { id: 42, quote: "有些「必需」，只是你的王國沿用已久的規則，未必適用於別的地方。" },
+      { id: 43, quote: "如果今天有很多情緒，就讓它們先待在那裡。日子不會因為你急著整理它們，就立刻變好。" },
+      { id: 44, quote: "想離開，不代表你不好。有時候，只是你不想再讓自己被折磨。" },
+      { id: 45, quote: "真正的強者，願意為自己的錯誤買單。" },
+      { id: 46, quote: "不需要為銀行存款這張成績單賦予太多意義。你現在所擁有的一切，都只是暫時借來的人生。" },
+      { id: 47, quote: "有時候，我們真正想要的不是得到什麼，而是終於可以為自己做決定。" },
+      { id: 48, quote: "有些東西不是還需要，只是還捨不得丟。" },
+      { id: 49, quote: "所有對未來的糾纏都是消耗。" },
+      { id: 50, quote: "傷口本來就會自己好起來。真正的療癒，是接受受傷的自己，也不再重蹈覆轍。" }
+    ];
+
+    let currentDrawnCard = null;
+    let userStreak = 1;
+    let lastOriginElementId = null;
+
+    document.addEventListener('DOMContentLoaded', () => {
+      document.getElementById('year-text').innerText = new Date().getFullYear();
+      initStreakAndCardState();
+      updateSavedQuotesBadge();
+      
+      window.addEventListener('hashchange', handleHashRouting);
+      window.addEventListener('scroll', handleScrollEffects);
+      window.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          closeConsultModal();
+          closeSavedQuotesModal();
+        }
+      });
+
+      handleHashRouting();
+    });
+
+    function handleScrollEffects() {
+      const topBtn = document.getElementById('back-to-top-btn');
+      const header = document.getElementById('main-header');
+
+      if (window.scrollY > 300) {
+        topBtn.classList.remove('opacity-0', 'invisible');
+        topBtn.classList.add('opacity-100', 'visible');
+      } else {
+        topBtn.classList.add('opacity-0', 'invisible');
+        topBtn.classList.remove('opacity-100', 'visible');
+      }
+
+      if (window.scrollY > 20) {
+        header.classList.add('shadow-soft');
+      } else {
+        header.classList.remove('shadow-soft');
+      }
+    }
+
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function navTo(viewId, originElementId = null) {
+      if (originElementId) {
+        lastOriginElementId = originElementId;
+      }
+
+      document.querySelectorAll('.spa-view').forEach(view => {
+        view.classList.add('hidden');
+        view.classList.remove('block', 'animate-fade-in');
+      });
+
+      const targetView = document.getElementById('view-' + viewId);
+      if (targetView) {
+        targetView.classList.remove('hidden');
+        targetView.classList.add('block', 'animate-fade-in');
+      }
+
+      if (viewId === 'home' && originElementId) {
+        setTimeout(() => {
+          const elem = document.getElementById(originElementId);
+          if (elem) {
+            elem.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          } else {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          }
+        }, 100);
+      } else {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    }
+
+    function goBackToOrigin() {
+      if (lastOriginElementId) {
+        navTo('home', lastOriginElementId);
+      } else {
+        navTo('home');
+      }
+    }
+
+    function handleHashRouting() {
+      const hash = window.location.hash.replace('#', '');
+      if (hash.startsWith('service-')) {
+        navTo(hash);
+      } else if (hash === 'creator-story' || hash === 'voices-section' || hash === 'recent-activities') {
+        navTo('home', hash);
+      } else {
+        navTo('home');
+      }
+    }
+
+    function initStreakAndCardState() {
+      const today = new Date().toDateString();
+      const lastDrawDate = localStorage.getItem('crossroads_last_draw_date');
+      let streak = parseInt(localStorage.getItem('crossroads_streak') || '1', 10);
+
+      if (lastDrawDate) {
+        const lastDate = new Date(lastDrawDate);
+        const diffTime = Math.abs(new Date(today) - lastDate);
+        const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+
+        if (diffDays === 1) {
+          userStreak = streak;
+        } else if (diffDays > 1) {
+          userStreak = 1;
+          localStorage.setItem('crossroads_streak', '1');
+        } else {
+          userStreak = streak;
+        }
+      }
+
+      document.getElementById('streak-count').innerText = userStreak;
+      document.getElementById('streak-badge').classList.remove('hidden');
+
+      if (lastDrawDate === today) {
+        const savedCardObj = localStorage.getItem('crossroads_today_card');
+        if (savedCardObj) {
+          currentDrawnCard = JSON.parse(savedCardObj);
+          renderFlippedCard(currentDrawnCard);
+          document.getElementById('drawn-today-notice').classList.remove('hidden');
+          document.getElementById('btn-draw').innerText = '重溫今日卡牌';
+        }
+      }
+    }
+
+    function handleCardClick() {
+      const cardEl = document.getElementById('card-element');
+      if (!cardEl.classList.contains('is-flipped')) {
+        performCardDraw();
+      }
+    }
+
+    function performCardDraw() {
+      const cardEl = document.getElementById('card-element');
+
+      if (cardEl.classList.contains('is-flipped') && currentDrawnCard) {
+        showToast('你已經翻開今日的小語囉！');
+        return;
+      }
+
+      const randomIndex = Math.floor(Math.random() * CARDS_DATABASE.length);
+      currentDrawnCard = CARDS_DATABASE[randomIndex];
+
+      const today = new Date().toDateString();
+      const lastDrawDate = localStorage.getItem('crossroads_last_draw_date');
+
+      if (lastDrawDate !== today) {
+        if (lastDrawDate) {
+          userStreak += 1;
+        }
+        localStorage.setItem('crossroads_last_draw_date', today);
+        localStorage.setItem('crossroads_streak', userStreak.toString());
+        localStorage.setItem('crossroads_today_card', JSON.stringify(currentDrawnCard));
+        document.getElementById('streak-count').innerText = userStreak;
+      }
+
+      cardEl.style.transform = 'scale(0.95) rotateY(90deg)';
+      setTimeout(() => {
+        renderFlippedCard(currentDrawnCard);
+        cardEl.classList.add('is-flipped');
+        cardEl.style.transform = '';
+      }, 300);
+
+      document.getElementById('btn-draw').classList.add('hidden');
+      document.getElementById('post-draw-buttons').classList.remove('hidden');
+      showToast('✨ 今日的小語已為你呈現');
+    }
+
+    function redrawCard() {
+      const randomIndex = Math.floor(Math.random() * CARDS_DATABASE.length);
+      currentDrawnCard = CARDS_DATABASE[randomIndex];
+
+      const cardEl = document.getElementById('card-element');
+      cardEl.classList.remove('is-flipped');
+
+      setTimeout(() => {
+        renderFlippedCard(currentDrawnCard);
+        cardEl.classList.add('is-flipped');
+      }, 400);
+
+      showToast('以新的視角抽出一張小語');
+    }
+
+    function renderFlippedCard(card) {
+      document.getElementById('card-id-text').innerText = `#CARD-${String(card.id).padStart(2, '0')}`;
+      document.getElementById('card-quote-text').innerText = `「${card.quote}」`;
+    }
+
+    function saveCurrentQuote() {
+      if (!currentDrawnCard) return;
+
+      let savedQuotes = JSON.parse(localStorage.getItem('crossroads_saved_quotes') || '[]');
+      const exists = savedQuotes.some(q => q.id === currentDrawnCard.id);
+
+      if (!exists) {
+        savedQuotes.push(currentDrawnCard);
+        localStorage.setItem('crossroads_saved_quotes', JSON.stringify(savedQuotes));
+        updateSavedQuotesBadge();
+        showToast('已將這句話珍藏在列表中 ❤️');
+      } else {
+        showToast('這句話已在您的收藏列表中囉');
+      }
+
+      const textToCopy = `十字路口 · 今日支持小語：\n「${currentDrawnCard.quote}」`;
+      const tempInput = document.createElement('textarea');
+      tempInput.value = textToCopy;
+      document.body.appendChild(tempInput);
+      tempInput.select();
+      document.execCommand('copy');
+      document.body.removeChild(tempInput);
+    }
+
+    function shareCurrentQuote() {
+      if (!currentDrawnCard) return;
+      
+      const cardTitle = `十字路口 · 今日祝福小語 (#CARD-${String(currentDrawnCard.id).padStart(2, '0')})`;
+      const shareUrl = window.location.href.split('#')[0];
+      const shareText = `${cardTitle}\n「${currentDrawnCard.quote}」\n\n給正在改變路上的你，也來抽一張今日祝福吧：\n${shareUrl}`;
+
+      if (navigator.share) {
+        navigator.share({
+          title: '十字路口 · 今日祝福小語',
+          text: shareText,
+          url: shareUrl
+        }).then(() => {
+          showToast('✨ 已分享今日的祝福！');
+        }).catch((err) => {
+          if (err.name !== 'AbortError') {
+            copyQuoteTextToClipboard(shareText);
+          }
+        });
+      } else {
+        copyQuoteTextToClipboard(shareText);
+      }
+    }
+
+    function copyQuoteTextToClipboard(text) {
+      const tempInput = document.createElement('textarea');
+      tempInput.value = text;
+      document.body.appendChild(tempInput);
+      tempInput.select();
+      document.execCommand('copy');
+      document.body.removeChild(tempInput);
+      showToast('✨ 祝福小語與連結已複製，可貼上分享給朋友！');
+    }
+
+    function copyQuoteToClipboard(quoteText) {
+      const textToCopy = `十字路口 · 心靈小語：\n「${quoteText}」`;
+      const tempInput = document.createElement('textarea');
+      tempInput.value = textToCopy;
+      document.body.appendChild(tempInput);
+      tempInput.select();
+      document.execCommand('copy');
+      document.body.removeChild(tempInput);
+      showToast('小語已複製到剪貼簿 ✨');
+    }
+
+    function updateSavedQuotesBadge() {
+      const savedQuotes = JSON.parse(localStorage.getItem('crossroads_saved_quotes') || '[]');
+      const badge = document.getElementById('saved-count-badge');
+      if (savedQuotes.length > 0) {
+        badge.innerText = savedQuotes.length;
+        badge.classList.remove('hidden');
+      } else {
+        badge.classList.add('hidden');
+      }
+    }
+
+    function handleModalBackdropClick(event, modalId) {
+      if (event.target.id === modalId) {
+        if (modalId === 'consultation-modal') closeConsultModal();
+        if (modalId === 'saved-quotes-modal') closeSavedQuotesModal();
+      }
+    }
+
+    function openConsultModal(defaultService = '職涯諮詢與一對一') {
+      const modal = document.getElementById('consultation-modal');
+      const select = document.getElementById('consult-service');
+      if (select) select.value = defaultService;
+      modal.classList.remove('opacity-0', 'invisible');
+      modal.querySelector('div').classList.remove('scale-95');
+      document.body.classList.add('overflow-hidden');
+    }
+
+    function closeConsultModal() {
+      const modal = document.getElementById('consultation-modal');
+      modal.classList.add('opacity-0', 'invisible');
+      modal.querySelector('div').classList.add('scale-95');
+      document.body.classList.remove('overflow-hidden');
+    }
+
+    function handleConsultSubmit(e) {
+      e.preventDefault();
+
+      const name = document.getElementById('consult-name').value;
+      const contact = document.getElementById('consult-contact').value;
+      const service = document.getElementById('consult-service').value;
+      const note = document.getElementById('consult-note').value;
+
+      const payload = { name, contact, service, note };
+
+      if (window.saveConsultationToFirebase) {
+        window.saveConsultationToFirebase(payload);
+      }
+
+      if (typeof GOOGLE_APPS_SCRIPT_URL !== 'undefined' && GOOGLE_APPS_SCRIPT_URL.trim() !== '') {
+        fetch(GOOGLE_APPS_SCRIPT_URL, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'text/plain;charset=utf-8',
+          },
+          body: JSON.stringify(payload)
+        })
+        .then(res => res.json())
+        .then(data => {
+          closeConsultModal();
+          showToast('✨ 已收到您的預約，我們會盡快與您聯繫！');
+          e.target.reset();
+        })
+        .catch(err => {
+          console.error('GAS API Error:', err);
+          closeConsultModal();
+          showToast('✨ 已收到您的預約紀錄！');
+          e.target.reset();
+        });
+      } else {
+        closeConsultModal();
+        showToast('✨ 已收到您的預約，我們會盡快與您聯繫！');
+        e.target.reset();
+      }
+    }
+
+    function openSavedQuotesModal() {
+      const modal = document.getElementById('saved-quotes-modal');
+      const container = document.getElementById('saved-quotes-container');
+      const savedQuotes = JSON.parse(localStorage.getItem('crossroads_saved_quotes') || '[]');
+
+      if (savedQuotes.length === 0) {
+        container.innerHTML = `
+          <div class="text-center py-10 text-morandi-muted text-xs">
+            <i class="fa-regular fa-bookmark text-2xl mb-2 block opacity-40"></i>
+            尚無收藏卡片，點擊抽卡下方「這句話，我想留著」即可儲存。
+          </div>
+        `;
+      } else {
+        container.innerHTML = savedQuotes.map(q => `
+          <div class="bg-morandi-bg p-4 rounded-2xl border border-morandi-accentSoft/80 flex justify-between items-center text-xs">
+            <p class="font-serif-custom text-morandi-dark pr-3 font-medium">「${q.quote}」</p>
+            <div class="flex items-center gap-2">
+              <button onclick="copyQuoteToClipboard('${q.quote.replace(/'/g, "\\'")}')" class="text-morandi-muted hover:text-morandi-accent p-1 transition-colors" title="複製小語">
+                <i class="fa-regular fa-copy"></i>
+              </button>
+              <button onclick="removeSavedQuote(${q.id})" class="text-morandi-muted hover:text-red-400 p-1 transition-colors" title="刪除">
+                <i class="fa-solid fa-trash-can"></i>
+              </button>
+            </div>
+          </div>
+        `).join('');
+      }
+
+      modal.classList.remove('opacity-0', 'invisible');
+      modal.querySelector('div').classList.remove('scale-95');
+      document.body.classList.add('overflow-hidden');
+    }
+
+    function closeSavedQuotesModal() {
+      const modal = document.getElementById('saved-quotes-modal');
+      modal.classList.add('opacity-0', 'invisible');
+      modal.querySelector('div').classList.add('scale-95');
+      document.body.classList.remove('overflow-hidden');
+    }
+
+    function removeSavedQuote(id) {
+      let savedQuotes = JSON.parse(localStorage.getItem('crossroads_saved_quotes') || '[]');
+      savedQuotes = savedQuotes.filter(q => q.id !== id);
+      localStorage.setItem('crossroads_saved_quotes', JSON.stringify(savedQuotes));
+      updateSavedQuotesBadge();
+      openSavedQuotesModal();
+      showToast('已自收藏中移除');
+    }
+
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobile-menu');
+      const icon = document.getElementById('mobile-menu-icon');
+      menu.classList.toggle('hidden');
+      if (menu.classList.contains('hidden')) {
+        icon.className = 'fa-solid fa-bars text-lg';
+      } else {
+        icon.className = 'fa-solid fa-xmark text-lg';
+      }
+    }
+
+    function showToast(msg) {
+      const toast = document.getElementById('toast');
+      document.getElementById('toast-message').innerText = msg;
+      toast.classList.remove('opacity-0', 'pointer-events-none');
+      toast.classList.add('opacity-100');
+      setTimeout(() => {
+        toast.classList.add('opacity-0', 'pointer-events-none');
+        toast.classList.remove('opacity-100');
+      }, 3000);
+    }
+  </script>
+</body>
+</html>
